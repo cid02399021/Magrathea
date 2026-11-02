@@ -430,7 +430,7 @@ class Runner:
         self.reviewer = config.get("reviewer", {})
         self._reject_config_secrets()
         limits = config.get("limits", {})
-        self.max_model_calls = int(limits.get("max_model_calls", 12))
+        self.max_model_calls = int(limits.get("max_model_calls", 24))
         self.max_seconds = float(limits.get("max_seconds", 7200))
         self.max_fix_rounds = int(limits.get("max_fix_rounds", 5))
         self.call_timeout = float(limits.get("call_timeout", 180))

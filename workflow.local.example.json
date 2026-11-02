@@ -10,7 +10,7 @@
     "provider": "codex"
   },
   "limits": {
-    "max_model_calls": 6,
+    "max_model_calls": 12,
     "max_seconds": 1800,
     "max_fix_rounds": 5,
     "call_timeout": 180,

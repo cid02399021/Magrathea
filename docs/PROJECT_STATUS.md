@@ -14,3 +14,8 @@ Stage5 paper-profile/real-EOS work has not started. The prior read-only H/He tab
 Do not auto-spend remaining model calls or extend paidAPI budget. The user authorized continuation through Stage4, now fulfilled in this bounded conditional sense. A new operator’s generic workflow uses their own explicit config/budget/run_dir; cloning or doctor never authorizes science runs. The portable API workflow is not claimed to have orchestrated these experiments.
 
 Historical54/8/67 grids and original dirty research checkouts remain preserved; no install/auth repeated. New artifacts remain onD:. [Implementation ledger](TP_IMPLEMENTATION_PROGRESS.md), [acceptance](TP_ACCEPTANCE.md).
+
+
+## 2026-11-02 operator budget update
+
+The operator doubled the tracked project DeepSeek ceiling44→88; see `workflow/project-budget.json`. Historical TP implementation44/44 records describe that closed phase; they are not the current global authorization gate. This conversation’s authorized work may use DeepSeek without per-call confirmation; do not ask repeatedly about the superseded44-call ceiling. Generic per-run max_model_calls values were doubled (fallback12→24, live example6→12, offline demo12→24); that counter includes coder and reviewer logical launches, not DeepSeek-only billing. Project88 policy does not automatically aggregate independent operators/portable runs. Scientific fit ceiling20 and closed historical contracts remain unchanged; no new physics experiment is authorized by increasing API budget.

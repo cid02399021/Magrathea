@@ -15,3 +15,8 @@ Fresh local clone verified at commit `35eece52f1ad3811bea616b14906dce709e7f0dc`:
 ## Publication
 
 Public repository created and initial remote main SHA verified equal to local `e738f1d2c77b1ed9cd2bc8cf08a5966c4b32bcef`: https://github.com/yt2523/subneptune-research-workflow . Later documentation commits do not change the reviewed runner byte hash. GitHub Issues is enabled with a minimal redacted-report template; no test issue was posted.
+
+
+## 2026-11-02 budget-only maintenance
+
+DeepSeek supplied the default fallback change12→24; explicit examples doubled. Reviewed historical runner hashes above remain historical, not the current runner identity. CurrentSHA256 4dc0d8400ebcbea7e3d490cdb5f6fa5b3045944cfc57e58ce78760298ee22753. Fresh Windows suite:66 tests run,62passed,4skipped; no live provider invocation by the test suite. New report/plotting used separate6 DeepSeek calls (5plotting/repair,1default-line maintenance), not66test provider calls; no new scientific solve. Current default policy records44→88; earlier experiment/source artifacts remain unchanged.

@@ -1,0 +1,187 @@
+{
+  "date": "2026-11-02",
+  "status": "PASS_NUMERIC_PROVENANCE_AND_LOCAL_LINK_AUDIT",
+  "new_scientific_solver_calls": 0,
+  "new_deepseek_calls": 6,
+  "plotting_calls": 5,
+  "workflow_default_maintenance_calls": 1,
+  "project_call_ceiling": 88,
+  "historical_tracked_tp_calls": 44,
+  "scientific_full_fits_unchanged": 14,
+  "figure_groups": 8,
+  "png_files": 8,
+  "svg_files": 8,
+  "before_after_layout_plotted_values_equal": true,
+  "html_local_references_checked": 119,
+  "archive_checks": [
+    {
+      "archive": "experiments/archive/20261018",
+      "checked_files": 117,
+      "result": "BYTE_HASHES_MATCH",
+      "solver_calls": 0
+    },
+    {
+      "archive": "experiments/subneptune-20261027",
+      "checked_files": 689,
+      "result": "BYTE_HASHES_MATCH",
+      "solver_calls": 0
+    },
+    {
+      "archive": "experiments/prescribed-tp-20261028",
+      "checked_files": 91,
+      "result": "BYTE_HASHES_MATCH",
+      "solver_calls": 0
+    },
+    {
+      "archive": "experiments/prescribed-tp-reciprocal-20261030",
+      "checked_files": 78,
+      "result": "BYTE_HASHES_MATCH",
+      "solver_calls": 0
+    }
+  ],
+  "plot_script_sha256": "5b698634d985f42b1085f4b7872bb6e29b24e4ed26a714fa68de265b1a137897",
+  "numeric_checks": [
+    "raw dimensionless confirmation residuals equal source",
+    "A failure samples sorted and B target separate",
+    "steam exact displayedID excludes old0.05bar",
+    "721layer grey18samples in6groups",
+    "six main boundarycases only",
+    "all plotted-value records unchanged by typography"
+  ],
+  "workflow_tests": {
+    "run": 66,
+    "passed": 62,
+    "skipped": 4,
+    "provider_calls": 0
+  },
+  "provider_usage": [
+    {
+      "ordinal": 1,
+      "task": "task",
+      "status": "proposal_saved",
+      "usage": {
+        "prompt_tokens": 12156,
+        "completion_tokens": 11271,
+        "total_tokens": 23427,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 12156
+      },
+      "finish_reason": "stop",
+      "proposal_sha256": "294ce9e04872cf17f68a3c953085c736fa0f55a2e7af2ae5b84929cec0a8b952"
+    },
+    {
+      "ordinal": 2,
+      "task": "repair1",
+      "status": "proposal_saved",
+      "usage": {
+        "prompt_tokens": 11916,
+        "completion_tokens": 11094,
+        "total_tokens": 23010,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 11916
+      },
+      "finish_reason": "stop",
+      "proposal_sha256": "357a2e85290778a6b7c5aee71fc40a3a93dc57c97e3dcfbd88a0281fe866993c"
+    },
+    {
+      "ordinal": 3,
+      "task": "repair2",
+      "status": "proposal_saved",
+      "usage": {
+        "prompt_tokens": 5445,
+        "completion_tokens": 5179,
+        "total_tokens": 10624,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 5445
+      },
+      "finish_reason": "stop",
+      "proposal_sha256": "dbd421ee30e9ce79eb6b6a90a310ed5d0ede6d398444e36275e7ed15b85c876c"
+    },
+    {
+      "ordinal": 4,
+      "task": "repair3",
+      "status": "proposal_saved",
+      "usage": {
+        "prompt_tokens": 1782,
+        "completion_tokens": 957,
+        "total_tokens": 2739,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1782
+      },
+      "finish_reason": "stop",
+      "proposal_sha256": "be9a32536aa4c95c5f29d08448b915053592891a3af29dc98587f37c0237db99"
+    },
+    {
+      "ordinal": 5,
+      "task": "layout",
+      "status": "proposal_saved",
+      "usage": {
+        "prompt_tokens": 6054,
+        "completion_tokens": 5752,
+        "total_tokens": 11806,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 6054
+      },
+      "finish_reason": "stop",
+      "proposal_sha256": "5b698634d985f42b1085f4b7872bb6e29b24e4ed26a714fa68de265b1a137897"
+    },
+    {
+      "ordinal": 6,
+      "task": "budget-default",
+      "status": "proposal_saved",
+      "usage": {
+        "prompt_tokens": 157,
+        "completion_tokens": 33,
+        "total_tokens": 190,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 157
+      },
+      "finish_reason": "stop",
+      "proposal_sha256": "338d301531500a7773f5ac4cb79c0df31660dbbb3dca36ffaac3ea89316fec48"
+    }
+  ],
+  "limits": "Byte/link/coordinate checks plus source/visual review; no new physical or statistical validity claim.",
+  "artifact_sha256": {
+    "figures-20261102/01-baselines-20261018.png": "edcef45a0315f57b8fa1d66f2bb9fc6d36531ddfa9e46f0122b1ac85b9fa9022",
+    "figures-20261102/01-baselines-20261018.svg": "aaafd48de49182738ab9a48a3874ce500b83ab991844216b9bcc061435193651",
+    "figures-20261102/02-recipes-20261018.png": "8eb0a908a42079fa57b45bc5f8b2d3be8464433dc8a8e3bbae7d53af3cd0edb3",
+    "figures-20261102/02-recipes-20261018.svg": "09449f85f7adef7e3eb668f0f03e970db8fffd05c82a17bc551376ff6f0db462",
+    "figures-20261102/03-grey-20261025.png": "6d93d8125bf6fa8b4987fc9e4be301bca1050d0b2810a6f4b0a4150105ade426",
+    "figures-20261102/03-grey-20261025.svg": "da65ca1445a11e2700b1ae7ab4cfb4e802a064c49a350ff45fe5a94f5627e0c2",
+    "figures-20261102/04-boundary-20261025.png": "4d966e189c2714c89429f4b14bf3f600bf1fe7f6ddb8be8f2b857ea36acb2ef7",
+    "figures-20261102/04-boundary-20261025.svg": "9b603817a229b3c97e328fa6d5433bd77da8cef22af49f7ad787499932d42a3a",
+    "figures-20261102/05-thermal-composition-20261025.png": "41ac5dd4da28b7ad1200a7cad84a3a62b2666f49649d3456adec61ba9c389241",
+    "figures-20261102/05-thermal-composition-20261025.svg": "c598d8707ae8e3a31a43d70599aae6eca3883226f1c37e713368f13ffc52355e",
+    "figures-20261102/06-prescribed-forward-20261029.png": "514d4e384e8fe2a376e3845fa84e7117e9ec66c6b749f0fb9e3d6412e97ef157",
+    "figures-20261102/06-prescribed-forward-20261029.svg": "12d074e15aa42bedc410067dd8b731fcbd7de2e6493a0882cbf8bb2be8251dd9",
+    "figures-20261102/07-original-failure-20261029.png": "cbc82a2c22a6bba1b848819f6fba27d00e144b92718812d0366e5ec510dffa90",
+    "figures-20261102/07-original-failure-20261029.svg": "a6e1ad2172cfb0715c587b2e9220e03df93575c72f5d3ea4af3661d4a06808ee",
+    "figures-20261102/08-local-recovery-20261030.png": "bf4b2c3c929120597cc93f508b14cc61612a3b2c1be8cdeda5fa0fac0700183b",
+    "figures-20261102/08-local-recovery-20261030.svg": "bb1226bc5b5ca85cac989aa2601dc7998f35f94a1d2ca4936a70c53f4434e281",
+    "figures-20261102/plots.json": "c9ce31ee058e579b1bdb3c8506142bdf974f2a417fd4506fb1b111e9dd7613d7",
+    "figures-20261102/plotted-values.json": "3bd470f46000c5be9a95d0f78fd7e47ba3b846b69356dc270362407f65d12fd7"
+  },
+  "independent_review": {
+    "path": "FIGURES_REVIEW.md",
+    "sha256": "25ccb6301ff56a8b58bbb2f9abe010af1e699b8c8e6d23b0a0696d0e3bfa4a08",
+    "status": "SCOPED_APPROVAL"
+  }
+}

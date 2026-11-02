@@ -52,3 +52,8 @@ The current model proposal protocol writes complete UTF-8 text files within decl
 The logical call count persists across resume; the wall-time deadline applies to each invocation. A subprocess timeout is not a full HPC/child-process-tree cancellation system. Use reviewed local checks; long solver jobs, distributed work and untrusted code require their own execution environment and authorization. Automatic integration/push of generated code is intentionally a coordinator step after independent acceptance, not an action a builder can request through the proposal protocol.
 
 Task dependencies do not automatically infer complete regression coverage: later milestones should include earlier critical invariant checks in their fixed tests. Keep those checks deterministic rather than asking a model to reinterpret pass/fail each time.
+
+
+## 2026-11-02 operator budget update
+
+The operator doubled the tracked project DeepSeek ceiling44→88; see `workflow/project-budget.json`. Historical TP implementation44/44 records describe that closed phase; they are not the current global authorization gate. This conversation’s authorized work may use DeepSeek without per-call confirmation; do not ask repeatedly about the superseded44-call ceiling. Generic per-run max_model_calls values were doubled (fallback12→24, live example6→12, offline demo12→24); that counter includes coder and reviewer logical launches, not DeepSeek-only billing. Project88 policy does not automatically aggregate independent operators/portable runs. Scientific fit ceiling20 and closed historical contracts remain unchanged; no new physics experiment is authorized by increasing API budget.

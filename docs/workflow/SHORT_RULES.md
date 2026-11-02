@@ -12,3 +12,8 @@
 10. Scripts do arithmetic, hashing, batching and summaries. Send models narrow code + failures, no full history or per-case calls.
 11. Stop with a reason and next action. Five ineffective valid repairs trigger Codex diagnosis, not an endless loop.
 12. Archive each approved milestone and verify remote commit. Keep secrets/private event logs outside Git. These rules are concise index entries; original evidence lives in archived reports.
+
+
+## 2026-11-02 operator budget update
+
+The operator doubled the tracked project DeepSeek ceiling44→88; see `workflow/project-budget.json`. Historical TP implementation44/44 records describe that closed phase; they are not the current global authorization gate. This conversation’s authorized work may use DeepSeek without per-call confirmation; do not ask repeatedly about the superseded44-call ceiling. Generic per-run max_model_calls values were doubled (fallback12→24, live example6→12, offline demo12→24); that counter includes coder and reviewer logical launches, not DeepSeek-only billing. Project88 policy does not automatically aggregate independent operators/portable runs. Scientific fit ceiling20 and closed historical contracts remain unchanged; no new physics experiment is authorized by increasing API budget.

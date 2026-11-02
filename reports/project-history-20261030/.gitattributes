@@ -1,1 +1,3 @@
 * -text
+figures-20261102/*.svg -whitespace
+*.log -whitespace

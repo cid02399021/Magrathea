@@ -32,3 +32,8 @@ Milestone archive: inputs + source/config identities + outputs/checks + limitati
 ## Reporting problems
 
 Use GitHub Issues in this repository. Prepare a minimal reproduction with commit/OS/Python, command, expected/actual behavior, stop_reason and redacted evidence. Use .github/ISSUE_TEMPLATE/bug_report.md. Draft first; submit only with the operator's authorization. Never attach keys, API files, raw private sessions or whole research datasets. Do not auto-open repetitive reports or run new experiments merely to report an infrastructure bug.
+
+
+## 2026-11-02 operator budget update
+
+The operator doubled the tracked project DeepSeek ceiling44→88; see [workflow/project-budget.json](workflow/project-budget.json). Historical TP implementation44/44 records describe that closed phase; they are not the current global authorization gate. This conversation’s authorized work may use DeepSeek without per-call confirmation; do not ask repeatedly about the superseded44-call ceiling. Generic per-run max_model_calls values were doubled (fallback12→24, live example6→12, offline demo12→24); that counter includes coder and reviewer logical launches, not DeepSeek-only billing. Project88 policy does not automatically aggregate independent operators/portable runs. Scientific fit ceiling20 and closed historical contracts remain unchanged; no new physics experiment is authorized by increasing API budget.

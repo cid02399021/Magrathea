@@ -1,5 +1,103 @@
 # Sub-Neptune 项目工作总报告
 
+<!-- VISUAL_HISTORY_20261102 -->
+## 按日期看图（2026-11-02补充）
+
+DeepSeek编写绘图，Codex执行/验收；没有新增科学求解。点击图片可查看原图；HTML版含目录和可展开的原报告。
+
+### 10月18日｜先验证基准
+
+**温度升高与地幔处方都能改变半径；先区分模型设定，再谈组成。**
+
+![10月18日｜先验证基准](figures-20261102/01-baselines-20261018.png)
+
+左上是300/1000 K基础实践；右上是容差加严后的半径变化。下排对照Huang论文图4：三次论文配方均落在图例末位显示精度内，当前默认地幔则不同。粉色仅表示论文显示精度，绝非观测置信带；基础实践核占0.325，论文基准核占0.33。
+
+[PNG](figures-20261102/01-baselines-20261018.png) · [SVG](figures-20261102/01-baselines-20261018.svg) · [summary.json](../../experiments/archive/20261018/capstone/summary.json) · [results.json](../../experiments/huang2022-fig4/results/results.json)
+
+### 10月18日｜六种文献配方长什么样
+
+**同一个半径附近，可能有差异很大的内部组成配方。**
+
+![10月18日｜六种文献配方长什么样](figures-20261102/02-recipes-20261018.png)
+
+左图显示实际岩石、水和气体质量分配，右图显示对应半径。微小气层用数值标出。案例的总质量、外边界和EOS并不完全相同，因此这是配方盘点，不能作纯组成因果比较。蒸汽仅展示补跑的0.2 bar案例，旧0.05 bar错误高密度支没有混入。
+
+[PNG](figures-20261102/02-recipes-20261018.png) · [SVG](figures-20261102/02-recipes-20261018.svg) · [summary.json](../../experiments/archive/20261018/literature-cases/summary.json)
+
+### 10月25日｜灰大气接在哪里，深层差多少
+
+**越早强行接上绝热升温，本组曲线的深层温度越高。**
+
+![10月25日｜灰大气接在哪里，深层差多少](figures-20261102/03-grey-20261025.png)
+
+左图采用已保存的Teq=350 K、Tint=25 K、gamma=0.1曲线，压力向下增大；虚线分别在1/10/100 bar处接绝热段。右图固定721层，展示6组参数在1000 bar处相对辐射参考的温度差。全部连接点是人工指定，并非求得的RCB；这里没有完整行星半径或组成反演。
+
+[PNG](figures-20261102/03-grey-20261025.png) · [SVG](figures-20261102/03-grey-20261025.svg) · [profiles.csv](../../experiments/subneptune-20261027/outputs/tp-comparison-20261025-dedb3d/profiles.csv) · [comparison.csv](../../experiments/subneptune-20261027/outputs/tp-comparison-20261025-dedb3d/comparison.csv)
+
+### 10月25日｜只改变外边界温度
+
+**同为1%气层，假设更热时计算半径更大。**
+
+![10月25日｜只改变外边界温度](figures-20261102/04-boundary-20261025.png)
+
+蓝、红分别对应5和8.04地球质量，左图给出6个主案例，右图显示相对300 K的半径变化。固定表面压力0.05 bar和gas_default。重复与加严容差案例没有当作独立温度点混入。连线仅帮助阅读，不代表额外计算；这一步改变的是表面温度。
+
+[PNG](figures-20261102/04-boundary-20261025.png) · [SVG](figures-20261102/04-boundary-20261025.svg) · [comparison.csv](../../experiments/subneptune-20261027/outputs/mode0-inputs-20261025-a17b/comparison.csv)
+
+### 10月25日｜温度假设如何推偏气层质量
+
+**把合成真值想得更冷，会恢复更多气体；想得更热，会恢复更少。**
+
+![10月25日｜温度假设如何推偏气层质量](figures-20261102/05-thermal-composition-20261025.png)
+
+前两幅是18个正向样本：两种质量、三种温度、三种气层比例。右图以360 K、1%气层为合成真值，300 K恢复约2.34%/2.61%，450 K恢复约0.39%/0.38%。这些是合成点估计，未计算观测后验或置信带；直线只连接已有样本。
+
+[PNG](figures-20261102/05-thermal-composition-20261025.png) · [SVG](figures-20261102/05-thermal-composition-20261025.svg) · [forward.csv](../../experiments/subneptune-20261027/outputs/thermal-composition-20261025-b01/forward.csv) · [recovery.csv](../../experiments/subneptune-20261027/outputs/thermal-composition-20261025-b01/recovery.csv)
+
+### 10月28—29日｜真正固定外边界后改变TP形状
+
+**同外边界、同密度EOS的A/B曲线，使半径相差约236.642 km。**
+
+![10月28—29日｜真正固定外边界后改变TP形状](figures-20261102/06-prescribed-forward-20261029.png)
+
+左图是实际读入的两行输入廓线覆盖表，压力范围并不表示模型气层实际延伸到该深度。右图比较形状信号与本次收紧容差、共线节点细化所见半径变化。固定5地球质量、0.1 bar/300 K和mu=2夹具；气层底温也会耦合影响固体内部。两项数值对照不构成全局误差界或任意弯曲TP的精度证明。
+
+[PNG](figures-20261102/06-prescribed-forward-20261029.png) · [SVG](figures-20261102/06-prescribed-forward-20261029.svg) · [summary.json](../../experiments/prescribed-tp-20261028/summary.json) · [profile.csv](../../experiments/prescribed-tp-20261028/data/A-truth/profile.csv) · [profile.csv](../../experiments/prescribed-tp-20261028/data/B-truth/profile.csv)
+
+### 10月29日｜原方向失败，也必须画出来
+
+**预设两端均达不到目标半径，因此这次恢复没有得到组成。**
+
+![10月29日｜原方向失败，也必须画出来](figures-20261102/07-original-failure-20261029.png)
+
+蓝线只连接A的三个实际样本，红虚线单独表示B的目标半径；不是把两种TP结果连成一条曲线。右图把总半径分为固体底部半径与气层厚度，展示两者的耦合变化。高气层样本气体底密度14.53、邻接固体4.71 g/cm³，是理想夹具适用性警讯。整体FAILED；端点不括根不等于内部或全域没有根。
+
+[PNG](figures-20261102/07-original-failure-20261029.png) · [SVG](figures-20261102/07-original-failure-20261029.svg) · [summary.json](../../experiments/prescribed-tp-20261028/summary.json)
+
+### 10月30日｜另立合同后的反向局部恢复
+
+**A的1%气层真值，用B恢复为0.243604%，相对低估75.64%。**
+
+![10月30日｜另立合同后的反向局部恢复](figures-20261102/08-local-recovery-20261030.png)
+
+左图是4次新搜索和一个复用旧端点，星号是恢复候选；中图比较真值与恢复组成；右图是同一恢复组成下的名义、收紧容差和节点细化残差，三者约2.04e-8。方向在看到原失败后选择；数值括区间不是置信区间，局部通过不证明唯一解或真实气体EOS有效性。原方向FAILED原样保留。
+
+[PNG](figures-20261102/08-local-recovery-20261030.png) · [SVG](figures-20261102/08-local-recovery-20261030.svg) · [summary.json](../../experiments/prescribed-tp-reciprocal-20261030/summary.json) · [summary.json](../../experiments/prescribed-tp-20261028/summary.json)
+
+10月27日工作流和10月28日接口属于工程里程碑，无额外科学网格，不另造数据曲线。
+
+[本次作图核查](FIGURES_VERIFICATION.json) · [独立审核](FIGURES_REVIEW.md) · [绘图源码](plot_history.py) · [数据来源与哈希](figures-20261102/plots.json)
+
+重新绘图只读数据，使用全新输出目录：
+
+```sh
+python -B reports/project-history-20261030/plot_history.py --output-dir <新的输出目录>
+```
+
+<!-- END_VISUAL_HISTORY_20261102 -->
+
+
 截至 2026-10-30（Europe/London）。范围：本地可核查的 2026-10-18—2026-10-30 项目记录；证据基准为公开仓库 main 的 `871d6e2715d7e6f10ef8a686e73cfbf6c53a2d2c`，本报告随后追加存档。
 
 ## 1. 先看结论
