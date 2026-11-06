@@ -2,6 +2,16 @@
 
 更新：2026-11-06。本文件独立可读，不依赖旧聊天。用户自己新建空白窗口；不要创建/分叉聊天，也不要自动读取旧聊天历史。
 
+## 第一段完成状态（2026-11-06，优先于下文原始任务描述）
+
+第一段已实现并经独立完整代码门通过：`workflow/single_case.py`，24项固定测试＋1项API传输测试通过。正式档案 `experiments/main-smoke-20261106/` 已实际演示mock成功、坏组成、adapter失败及拒绝覆盖；36个档案文件同时核对了工作树与Git blob哈希。源码/配置/TP字节按本段局部gitattributes保留。未调用真实solver/grid/拟合或改EOS，physical_acceptance始终false。
+
+DeepSeek负责全部产品代码；Codex负责合同/测试/诊断/独立验收/归档。当前API兼容入口 `workflow/deepseek_nonthinking.py` 复用原portable.Runner，不重写工作流。项目DeepSeek总账62/88，本轮12次，含两次协议失败与返修；历史科学拟合仍14次，新增0。
+
+用户示范 `pt_profile.txt` 已只读检查并原样保存在 `D:/Codex/downloads/toi732c-inputs/20261106/`：400点，Pa/K空白文本，P=1–1e9Pa；不是已批准的生产TP，原始内容未上传。下一段只建议显式Pa→bar/CSV适配＋原始/转换后身份＋同一mock闭环。先等用户检视本段成果，不自动扩大到真实solver。上传目标为用户指定 `yt2523/Magrathea` 的master；固定开发仓库仍为本仓库main。源代码/档案验证提交为2852e26，其后仅交接与预算next_action文档更新；发布完成以远端SHA核对记录为准。
+
+下文“当前任务/第一段”保留为原始规格，勿据此重复编码、重跑封存实验或再花API做已完成工作。实际结果和审核界限见档案README与evidence，下一步是用户检视。
+
 ## 当前任务
 
 同学尚未交付TP及完整输入。我们先用明确标注的测试输入，逐段实现主程序：小架构→最小闭环→真实solver单例→真实数据→小批次→grid/拟合。当前只实施第一段，完成后让用户检视，再增加复杂度。

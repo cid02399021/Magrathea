@@ -107,5 +107,5 @@
     }
   ],
   "main_smoke_deepseek_calls": 12,
-  "next_action": "Milestone implemented and code-gate approved; publish verified archive to yt2523/Magrathea, then await user inspection of explicit Pa-input adaptation proposal"
+  "next_action": "Await user inspection of archived mock first slice; proposed next minimal change is explicit Pa-to-bar TP format adaptation with the same mock pipeline. Do not start real solver/grid/fits."
 }
