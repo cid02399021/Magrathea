@@ -36,7 +36,8 @@
     "success/source/check_tp_model.py": "d433f06a9d6ed3d3c39c9ffe9c7b19319790290c4e95584c40ef49de30abc85a",
     "success/source/single_case.py": "81d2f92b447ef9faeb3ea1d2bd41e3933ebbaec133632d516d4ce900923e6c1d",
     "success/tp.csv": "e7bb77631d48bc2011d7ce2f46c6a204cd5a7aaefaa25ac3efa0d3b32e03aec5",
-    "verify_archive.py": "d299de619ce5eca738c9ce1c490a3c791fac4b45d6339bf12f7345b9a7e171ef"
+    "verify_archive.py": "d299de619ce5eca738c9ce1c490a3c791fac4b45d6339bf12f7345b9a7e171ef",
+    ".gitattributes": "2976c8793b265044f9a6dc5f64ce7f902338c568c5f7a370393c53fec5941783"
   },
   "source_sha256": "81d2f92b447ef9faeb3ea1d2bd41e3933ebbaec133632d516d4ce900923e6c1d",
   "source_base_commit": "b30a523bc31b1d3ba67e9268ac196cb83fbc7215",
