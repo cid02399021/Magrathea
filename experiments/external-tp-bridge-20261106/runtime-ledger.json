@@ -1,0 +1,52 @@
+{
+  "status": "ENGINEERING_FORWARD_PASS",
+  "max_attempts": 2,
+  "planet_attempts": 2,
+  "cases": [
+    {
+      "case": "real-01-baseline",
+      "ordinal": 1,
+      "status": "ENGINEERING_FORWARD_PASS",
+      "physical_acceptance": false,
+      "exit_code": 0,
+      "seconds": 21.562000000005355,
+      "radius_earth": 2.1483191091726397,
+      "gas_base_pressure_bar": 4575.400487535589,
+      "gas_base_temperature_K": 1051.6432432441286,
+      "actual_gas_pressure_bar": [
+        0.1,
+        4575.400487535589
+      ],
+      "gas_rows": 12163,
+      "normalized_fit_residual": {
+        "radius": -8.241575521255856e-09,
+        "pressure": 1.1879121932930595e-08,
+        "temperature": 1.5946199953042757e-08
+      }
+    },
+    {
+      "case": "real-02-confirmation",
+      "ordinal": 2,
+      "status": "ENGINEERING_FORWARD_PASS",
+      "physical_acceptance": false,
+      "exit_code": 0,
+      "seconds": 16.01600000000326,
+      "radius_earth": 2.148319087507168,
+      "gas_base_pressure_bar": 4575.400669640029,
+      "gas_base_temperature_K": 1051.6432538363874,
+      "actual_gas_pressure_bar": [
+        0.1,
+        4575.400669640029
+      ],
+      "gas_rows": 12163,
+      "normalized_fit_residual": {
+        "radius": 1.75152642712699e-08,
+        "pressure": -2.8140193458318997e-08,
+        "temperature": 4.4280597431324945e-08
+      }
+    }
+  ],
+  "radius_confirmation_relative_difference": 1.0084847984849868e-08,
+  "physical_acceptance": false,
+  "closed": true
+}

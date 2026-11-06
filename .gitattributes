@@ -6,3 +6,7 @@ experiments/main-smoke-20261106/** -text whitespace=cr-at-eol
 tests/test_single_case.py -text whitespace=cr-at-eol
 tests/fixtures/main-smoke* -text whitespace=cr-at-eol
 docs/superpowers/plans/2026-11-06-main-smoke.md -text whitespace=cr-at-eol
+
+# Preserve reviewed external-TP bridge contracts and tests.
+tests/test_tp_import.py -text whitespace=cr-at-eol
+docs/superpowers/plans/2026-11-06-external-tp-real-bridge.md -text whitespace=cr-at-eol

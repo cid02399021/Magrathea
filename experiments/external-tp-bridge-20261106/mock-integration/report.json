@@ -1,0 +1,33 @@
+{
+  "status": "ENGINEERING_SMOKE_PASS",
+  "physical_acceptance": false,
+  "reason": "",
+  "checks": [
+    "units valid",
+    "mass_earth positive finite",
+    "outer boundary positive finite",
+    "fractions valid",
+    "TP profile path found",
+    "TP header valid",
+    "TP rows >=2 and strictly increasing",
+    "outer boundary inside TP range",
+    "outer T matches T-lnP interpolation",
+    "result is dict with required keys",
+    "origin MOCK_SOLVER",
+    "physical_acceptance false",
+    "mass_earth and radius_earth positive finite",
+    "adapter success and validated result"
+  ],
+  "identities": {
+    "source/single_case.py": "81d2f92b447ef9faeb3ea1d2bd41e3933ebbaec133632d516d4ce900923e6c1d",
+    "source/check_tp_model.py": "d433f06a9d6ed3d3c39c9ffe9c7b19319790290c4e95584c40ef49de30abc85a",
+    "config": {
+      "path": "D:\\Codex\\downloads\\subneptune-research-workflow\\experiments\\external-tp-bridge-20261106\\inputs\\mock.json",
+      "sha256": "637bd5dda9a6cf2dd949f2ccaf805fa4aa4201d01b86fb2a2c0641c2caeb3d8a"
+    },
+    "tp": {
+      "path": "D:\\Codex\\downloads\\subneptune-research-workflow\\experiments\\external-tp-bridge-20261106\\converted\\profile.csv",
+      "sha256": "304680f64db554b665bc9fbc1563b5814cef435d1da58ad1c03deed3565281bf"
+    }
+  }
+}

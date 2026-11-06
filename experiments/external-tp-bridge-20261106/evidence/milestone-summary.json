@@ -1,0 +1,20 @@
+{
+  "question": "Can the existing real C++ solver use user-supplied atmosphere TP by native interpolation and yield a numerically consistent single forward structure?",
+  "answer": "ENGINEERING_FORWARD_PASS",
+  "physical_acceptance": false,
+  "user_profile_points": 400,
+  "new_deepseek_calls": 4,
+  "tracked_project_deepseek_total": 66,
+  "project_limit": 88,
+  "new_real_solver_launches": 2,
+  "old_closed_scientific_fit_count": 14,
+  "no_grid_or_composition_inversion": true,
+  "no_physics_source_or_EOS_edits": true,
+  "scope": "one test composition, two solver-control settings; not2independent physical experiments",
+  "website_basis": [
+    "https://magrathea-code-lab.rainymink8.chatgpt.site/phase-atlas/gas/index.html",
+    "local thermal-assumptions-report20261026 sections9-10"
+  ],
+  "native_interpolation": "TPProfile::at_cgs linear T-lnP; EOS density interpolation is a distinct operation",
+  "gas_only_prescription": true
+}

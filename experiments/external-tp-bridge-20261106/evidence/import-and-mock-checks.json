@@ -1,0 +1,12 @@
+{
+  "source_sha256": "d389fdae192d22bd57a50439bb487932e7d4df3782709f7372f7bf785926f50c",
+  "all400_pressures_converted_exactly_as_Pa_div_100000": true,
+  "all400_temperatures_unchanged": true,
+  "all400_native_node_temperatures_match": true,
+  "six_intermediate_native_queries_match_independent_reference": true,
+  "native_query_binary_sha256": "c3b7269110c9a156e44f91d641e9f966c0c69e022e02718d651eccb2be48ace6",
+  "mock_status": "ENGINEERING_SMOKE_PASS",
+  "outer_pressure_bar": 0.1,
+  "outer_temperature_K": 350,
+  "physical_acceptance": false
+}

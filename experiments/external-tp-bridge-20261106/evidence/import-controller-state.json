@@ -1,0 +1,57 @@
+{
+  "attempts": {},
+  "completed": [
+    "external_tp_import_native_query"
+  ],
+  "config_sha": "26ea30eb0c24b7716076c66d25c11807594d93818927c1a33aac5af182d61dc3",
+  "current_task": "external_tp_import_native_query",
+  "elapsed_seconds": 49.38702058792114,
+  "evidence": {
+    "external_tp_import_native_query:tests": {
+      "after_hash": "67652450c7bbf3c8c2445e4c0f1bffe4776737af9ba3d07491c8c64828cc7ea6",
+      "before_hash": "67652450c7bbf3c8c2445e4c0f1bffe4776737af9ba3d07491c8c64828cc7ea6",
+      "exit_codes": [
+        0
+      ],
+      "outputs": [
+        {
+          "argv": [
+            "C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+            "-B",
+            "tests/test_tp_import.py"
+          ],
+          "exit_code": 0,
+          "stderr_tail": "...........\r\n----------------------------------------------------------------------\r\nRan 11 tests in 6.538s\r\n\r\nOK\r\n",
+          "stdout_tail": ""
+        }
+      ],
+      "source_hash": "67652450c7bbf3c8c2445e4c0f1bffe4776737af9ba3d07491c8c64828cc7ea6",
+      "test_hash": "9dbbadffc9db2b10c9e5881f9b4183cfb42a22d009fc6a7248f1a3addfce61fe"
+    }
+  },
+  "last_feedback": {
+    "external_tp_import_native_query": []
+  },
+  "model_calls": 2,
+  "offline": false,
+  "source_hash": {
+    "after_apply": "67652450c7bbf3c8c2445e4c0f1bffe4776737af9ba3d07491c8c64828cc7ea6",
+    "after_tests": "67652450c7bbf3c8c2445e4c0f1bffe4776737af9ba3d07491c8c64828cc7ea6",
+    "before_start": "3a28540504775f27d82091e21c70639238f00202508e237c2a54ba825a25f057",
+    "last_source_checkpoint": "after_tests"
+  },
+  "state": "completed",
+  "statuses": {
+    "external_tp_import_native_query": "passed"
+  },
+  "stop_reason": "completed",
+  "usage": {
+    "coder": {
+      "calls": 1,
+      "completion_tokens": 2433,
+      "prompt_tokens": 5734,
+      "total_tokens": 8167
+    }
+  },
+  "valid_attempts": {}
+}

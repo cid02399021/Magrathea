@@ -1,0 +1,42 @@
+{
+  "total_mass_earth": 8.04,
+  "earth_mass_g": 5.9722e+27,
+  "requested_gas_fraction": 0.001,
+  "outer_pressure_bar": 0.1,
+  "outer_temperature_K": 350.0,
+  "density_formula": {
+    "mmol": 2,
+    "mp": 1.672621777e-24,
+    "kb": 1.3806488e-16
+  },
+  "thresholds": {
+    "normalized_fit_residual_max": 1e-06,
+    "effective_temperature_relative_max": 1e-12,
+    "stored_density_relative_max": 1e-10,
+    "accepted_pre_projection_temperature_relative_max": 1e-06,
+    "total_mass_relative_error_max": 1e-08
+  },
+  "physical_acceptance": false,
+  "artifacts": {
+    "build": {
+      "path": "../build/planet.elf",
+      "sha256": "20e429cf450650499e2dfe708b8a6cfeaa054aff47162fc89a4fad6e41dd4676"
+    },
+    "config": {
+      "path": "run.cfg",
+      "sha256": "76c4c396f38abbc640df97e0decebdc14bcd8cb8356bce62d1a1d473084aaca5"
+    },
+    "profile": {
+      "path": "../converted/profile.csv",
+      "sha256": "304680f64db554b665bc9fbc1563b5814cef435d1da58ad1c03deed3565281bf"
+    },
+    "source_manifest": {
+      "path": "source-manifest.json",
+      "sha256": "dcd2bbb55910e9247485936ee572c860767b970be6877599cf143d9da2bbd6e4"
+    },
+    "diagnostics": {
+      "path": "model.dat.tp.json",
+      "sha256": "18882b91996131d411a0cf0fa18133c5f34553e6579e0e3613a9acced062ba5a"
+    }
+  }
+}

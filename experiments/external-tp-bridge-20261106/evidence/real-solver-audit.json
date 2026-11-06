@@ -1,0 +1,14 @@
+{
+  "approved": true,
+  "findings": [
+    "No blocking numerical-engineering findings.",
+    "Fresh permitted verifier runs both exited 0 with status PASS: 12163 gas rows each, measured gas fraction 0.0010000000000000009, maximum density residual 4.3124757727148267e-16.",
+    "All 400 pressures match original Pa/100000 exactly; all temperatures remain unchanged. Saved native node queries match all 400 temperatures; reference queries agree within 1.65e-16 relative.",
+    "Native code uses external T-lnP interpolation for gas density and integration. Recorded gas pressures remain inside profile coverage; solids/water retain their existing thermal model. The gas_default hybrid is unused.",
+    "Archived ELF, contracts, configs, diagnostics and all 39 dependencies pass identity checks. Source differences from the recorded Git base are newline formatting only. Printed model data agree with genuine diagnostics within output precision; mock evidence is separate.",
+    "Explicit engineering inputs and mass accounting are consistent. Confirmation changes only output path and tighter numerical tolerances; radii are 2.1483191091726397 and 2.148319087507168 RE, differing relatively by 1.0084847984849868e-8.",
+    "Orchestration records the frozen contract identity, persists counters before launches, gates confirmation on baseline acceptance, and closes at two attempts within the frozen runtime limits. Historical 14-fit accounting remains separate.",
+    "Saved import/query gate and rerun logs report 11 tests passed; these were inspected, not rerun. No solver, compilation or historical script was invoked during this audit.",
+    "Approval covers saved numerical-engineering results only. Production boundaries/composition, realistic H/He EOS, observational inference and physical atmosphere validation remain future decisions, not blockers to this restricted approval."
+  ]
+}

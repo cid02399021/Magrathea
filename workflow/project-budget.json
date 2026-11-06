@@ -7,10 +7,10 @@
   "scope": "Current research/workflow task; not permission for new scientific experiments. Historical records remain unchanged.",
   "counter_scope": "Tracked TP implementation44 plus current report/maintenance calls; earlier historical sessions are not a complete lifetime billing ledger.",
   "recorded_tp_implementation_calls": 44,
-  "current_report_calls": 18,
+  "current_report_calls": 22,
   "recorded_scientific_full_fits": 14,
   "max_scientific_full_fits": 20,
-  "tracked_calls_total": 62,
+  "tracked_calls_total": 66,
   "main_smoke_runs": [
     {
       "run": "r1",
@@ -107,5 +107,42 @@
     }
   ],
   "main_smoke_deepseek_calls": 12,
-  "next_action": "Await user inspection of archived mock first slice; proposed next minimal change is explicit Pa-to-bar TP format adaptation with the same mock pipeline. Do not start real solver/grid/fits."
+  "next_action": "External TP import and two real forward-engineering calls passed independent audit. Publish archive then await user inspection; production HHe EOS/composition/reference pressure/TP provenance require major decision, no more solver/grid/inversion authorized by closed ledger.",
+  "authorization_latest": "2026-11-06 user authorized external TP import/interpolation followed by bounded real calculator attempt; ask only for major decisions/blockers",
+  "external_tp_bridge_runs": [
+    {
+      "run": "import-r1",
+      "deepseek_calls": 1,
+      "codex_reviews": 0,
+      "stop_reason": "native_query_compile_error",
+      "diagnosis": "private TPProfile ctor; unsafe output dir ownership and swallowed write errors"
+    },
+    {
+      "run": "import-r2",
+      "deepseek_calls": 1,
+      "codex_reviews": 0,
+      "stop_reason": "missing_os_import",
+      "native_query_tests": "passed"
+    },
+    {
+      "run": "import-r3",
+      "deepseek_calls": 1,
+      "codex_reviews": 1,
+      "stop_reason": "independent_review_rejected",
+      "tests": "9 passed",
+      "diagnosis": "converter hash/snapshot must share captured buffer; failed manifest expected units"
+    },
+    {
+      "run": "import-r4",
+      "deepseek_calls": 1,
+      "codex_reviews": 1,
+      "stop_reason": "complete_code_gate_passed",
+      "tests": "11 passed",
+      "source_aggregate_sha256": "67652450c7bbf3c8c2445e4c0f1bffe4776737af9ba3d07491c8c64828cc7ea6"
+    }
+  ],
+  "external_tp_bridge_real_attempts": 2,
+  "external_tp_bridge_real_attempt_limit": 2,
+  "external_tp_bridge_real_attempt_scope": "New user-authorized engineering forward probe; old14-fit study closed and unchanged",
+  "scientific_full_fit_accounting_note": "recorded_scientific_full_fits14 is the closed historical study. The2 new user-authorized engineering forward launches are counted separately; no old contract balance is reused."
 }

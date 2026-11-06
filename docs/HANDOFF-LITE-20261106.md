@@ -2,6 +2,16 @@
 
 更新：2026-11-06。本文件独立可读，不依赖旧聊天。用户自己新建空白窗口；不要创建/分叉聊天，也不要自动读取旧聊天历史。
 
+## 最新状态：外部TP与真实程序已算通（同日后续授权，优先于下文）
+
+用户后来明确授权查相关旧聊天里的代码分析网站，完成TP适配后尝试真实程序，并自行插值取值，只在重大决策/无法继续时询问。本轮已完成，不要重复计算：`workflow/tp_import.py`＋`workflow/tp_query.cpp`经DeepSeek实现、11项固定测试和独立代码门通过。400点原温度均保留，只做Pa→bar；现有TPProfile负责T-lnP，未重写EOS/TP算法。
+
+真实C++从干净源码副本构建，实际运行2次（同组成基准＋加严容差，新的max2x180s合同且账本已关闭）。测试设定M8.04ME、气体0.1%、非气体比例25:55:19、P0=.1bar、T0=350K由用户TP取得、理想gas_fixed_mu2。R=2.148319109/2.148319088RE，相对差1.0085e-8；气层底约4575bar/1052K，未超用户TP范围。两份高精度输出由原检查器和fresh只读Codex审计通过。仍physical_acceptance=false，非真实组成/观测拟合；气层以下沿原内部热结构。
+
+档案：`experiments/external-tp-bridge-20261106/README.md`，只读 `verify_archive.py` 不跑模型；内含原/转换后TP、39项实际编译源/表格和ELF、冻结合同、原始输出、审核与图。代码分析网站已找到并读过相关内容：https://magrathea-code-lab.rainymink8.chatgpt.site/phase-atlas/gas/index.html；它的旧源码快照早于现有外部TP接口，当前源码优先。
+
+项目DeepSeek66/88，本轮后续4次；新真实前向2次另计，旧14次拟合合同关闭、未借余额。未改物理源/EOS、原portable.py或旧实验；全部新文件D盘。下一项重大决定是正式H/He EOS/组成/参考压力及TP元数据，等待用户检视后再定，不自动grid/反演或重放。下文“下一段Pa适配/第一次接真solver”均已完成，勿重复花API/跑数。
+
 ## 第一段完成状态（2026-11-06，优先于下文原始任务描述）
 
 第一段已实现并经独立完整代码门通过：`workflow/single_case.py`，24项固定测试＋1项API传输测试通过。正式档案 `experiments/main-smoke-20261106/` 已实际演示mock成功、坏组成、adapter失败及拒绝覆盖；36个档案文件同时核对了工作树与Git blob哈希。源码/配置/TP字节按本段局部gitattributes保留。未调用真实solver/grid/拟合或改EOS，physical_acceptance始终false。

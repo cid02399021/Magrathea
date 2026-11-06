@@ -1,0 +1,9 @@
+{
+  "tracked_deepseek_total": 66,
+  "limit": 88,
+  "this_followup_deepseek_calls": 4,
+  "this_followup_real_solver_calls": 2,
+  "real_contract_closed": true,
+  "old_closed_study_fits": 14,
+  "old_study_replayed": false
+}
