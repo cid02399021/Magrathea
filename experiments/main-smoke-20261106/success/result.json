@@ -1,0 +1,6 @@
+{
+  "origin": "MOCK_SOLVER",
+  "mass_earth": 8.0,
+  "radius_earth": 2.0,
+  "physical_acceptance": false
+}

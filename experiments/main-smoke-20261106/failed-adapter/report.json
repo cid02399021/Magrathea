@@ -1,0 +1,29 @@
+{
+  "status": "FAILED",
+  "physical_acceptance": false,
+  "reason": "adapter error: INTENTIONAL_MOCK_ADAPTER_FAILURE",
+  "checks": [
+    "units valid",
+    "mass_earth positive finite",
+    "outer boundary positive finite",
+    "fractions valid",
+    "TP profile path found",
+    "TP header valid",
+    "TP rows >=2 and strictly increasing",
+    "outer boundary inside TP range",
+    "outer T matches T-lnP interpolation",
+    "adapter invocation failed"
+  ],
+  "identities": {
+    "source/single_case.py": "81d2f92b447ef9faeb3ea1d2bd41e3933ebbaec133632d516d4ce900923e6c1d",
+    "source/check_tp_model.py": "d433f06a9d6ed3d3c39c9ffe9c7b19319790290c4e95584c40ef49de30abc85a",
+    "config": {
+      "path": "D:\\Codex\\downloads\\subneptune-research-workflow\\experiments\\main-smoke-20261106\\inputs\\main-smoke.json",
+      "sha256": "d596a113578ca7e01c5639813d4319b808828ab12f475dbc3740c93af3594d18"
+    },
+    "tp": {
+      "path": "D:\\Codex\\downloads\\subneptune-research-workflow\\experiments\\main-smoke-20261106\\inputs\\main-smoke-tp.csv",
+      "sha256": "e7bb77631d48bc2011d7ce2f46c6a204cd5a7aaefaa25ac3efa0d3b32e03aec5"
+    }
+  }
+}

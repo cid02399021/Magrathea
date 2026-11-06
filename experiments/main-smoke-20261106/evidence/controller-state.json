@@ -1,0 +1,62 @@
+{
+  "attempts": {},
+  "completed": [
+    "single_case_mock_smoke"
+  ],
+  "config_sha": "042be473713afc0ab677d01cf47c4b915b4dd750e79ee04a1e8922263f6bc185",
+  "current_task": "single_case_mock_smoke",
+  "elapsed_seconds": 121.28920340538025,
+  "evidence": {
+    "single_case_mock_smoke:tests": {
+      "after_hash": "294caef9061648e31688d0a8c6b5c6b5403a9eeb433b6ed30bd57d549554b5f0",
+      "before_hash": "294caef9061648e31688d0a8c6b5c6b5403a9eeb433b6ed30bd57d549554b5f0",
+      "exit_codes": [
+        0
+      ],
+      "outputs": [
+        {
+          "argv": [
+            "C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+            "-B",
+            "tests/test_single_case.py"
+          ],
+          "exit_code": 0,
+          "stderr_tail": "........................\r\n----------------------------------------------------------------------\r\nRan 24 tests in 0.595s\r\n\r\nOK\r\n",
+          "stdout_tail": ""
+        }
+      ],
+      "source_hash": "294caef9061648e31688d0a8c6b5c6b5403a9eeb433b6ed30bd57d549554b5f0",
+      "test_hash": "a74a776b0ae0c9f90db35f1f3874a5ec42c785ccac2aa28a9db8f84f18c10079"
+    }
+  },
+  "last_feedback": {
+    "single_case_mock_smoke": [
+      "No blocking defects found in the complete implementation against the supplied acceptance criteria and 24 fixed tests.",
+      "Source/checker identities are initialized before config reads and retained when config is missing.",
+      "Supplied controller evidence reports 24 tests passing; tests were not rerun in this read-only review.",
+      "Approval covers the mock engineering code gate only. Fresh CLI/archive verification remains coordinator follow-up; physical_acceptance remains false."
+    ]
+  },
+  "model_calls": 2,
+  "offline": false,
+  "source_hash": {
+    "after_apply": "294caef9061648e31688d0a8c6b5c6b5403a9eeb433b6ed30bd57d549554b5f0",
+    "after_tests": "294caef9061648e31688d0a8c6b5c6b5403a9eeb433b6ed30bd57d549554b5f0",
+    "before_start": "3aeaf590dfc5a25d7408c8da084df4fe13deede67010020b8f7966f58b92d8f0",
+    "last_source_checkpoint": "after_tests"
+  },
+  "state": "completed",
+  "statuses": {
+    "single_case_mock_smoke": "passed"
+  },
+  "stop_reason": "completed",
+  "usage": {
+    "coder": {
+      "calls": 1,
+      "completion_tokens": 6493,
+      "prompt_tokens": 9726,
+      "total_tokens": 16219
+    }
+  },
+  "valid_attempts": {}
+}

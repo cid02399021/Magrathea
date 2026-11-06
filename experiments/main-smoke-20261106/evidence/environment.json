@@ -1,0 +1,9 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "executable": "C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "source_base_commit": "b30a523bc31b1d3ba67e9268ac196cb83fbc7215",
+  "source_sha256": "81d2f92b447ef9faeb3ea1d2bd41e3933ebbaec133632d516d4ce900923e6c1d",
+  "new_real_solver_launches": 0,
+  "new_scientific_full_fits": 0
+}

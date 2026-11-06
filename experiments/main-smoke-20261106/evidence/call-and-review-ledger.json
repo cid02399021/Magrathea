@@ -1,0 +1,215 @@
+{
+  "origin": "Coordinator summaries; unsuccessful verdicts stay unsuccessful",
+  "runs": [
+    {
+      "run": "r1",
+      "stop_reason": "paused:coder_parse_error",
+      "usage": {
+        "coder": {
+          "calls": 1,
+          "completion_tokens": 7000,
+          "prompt_tokens": 2901,
+          "total_tokens": 9901
+        }
+      },
+      "test_exit_codes": null,
+      "review_findings": null
+    },
+    {
+      "run": "r2",
+      "stop_reason": "paused:coder_parse_error",
+      "usage": {
+        "coder": {
+          "calls": 1,
+          "completion_tokens": 14000,
+          "prompt_tokens": 2937,
+          "total_tokens": 16937
+        }
+      },
+      "test_exit_codes": null,
+      "review_findings": null
+    },
+    {
+      "run": "r3",
+      "stop_reason": "paused:needs_codex_diagnosis:single_case_mock_smoke",
+      "usage": {
+        "coder": {
+          "calls": 1,
+          "completion_tokens": 5396,
+          "prompt_tokens": 2858,
+          "total_tokens": 8254
+        }
+      },
+      "test_exit_codes": [
+        1
+      ],
+      "review_findings": null
+    },
+    {
+      "run": "r4",
+      "stop_reason": "paused:needs_codex_diagnosis:single_case_mock_smoke",
+      "usage": {
+        "coder": {
+          "calls": 1,
+          "completion_tokens": 5259,
+          "prompt_tokens": 8218,
+          "total_tokens": 13477
+        }
+      },
+      "test_exit_codes": [
+        0
+      ],
+      "review_findings": [
+        "workflow/single_case.py:389-406 loses completed checks on validation failure. For example, malformed TP produces checks=[] despite successful config validation. Record checks incrementally as required.",
+        "workflow/single_case.py:355 always passes adapter_result=None when persisting failures. A returned, serializable result with mismatched mass or mutated inputs is discarded, violating the requirement to preserve result.json if returned.",
+        "The supplied evidence confirms all 15 fixed tests passed, but those tests do not cover these evidence-preservation failures."
+      ]
+    },
+    {
+      "run": "r5",
+      "stop_reason": "paused:needs_codex_diagnosis:single_case_mock_smoke",
+      "usage": {
+        "coder": {
+          "calls": 1,
+          "completion_tokens": 5479,
+          "prompt_tokens": 8650,
+          "total_tokens": 14129
+        }
+      },
+      "test_exit_codes": [
+        1
+      ],
+      "review_findings": null
+    },
+    {
+      "run": "r6",
+      "stop_reason": "paused:context_too_large",
+      "usage": {
+        "coder": {
+          "calls": 1,
+          "completion_tokens": 5601,
+          "prompt_tokens": 9051,
+          "total_tokens": 14652
+        }
+      },
+      "test_exit_codes": [
+        0
+      ],
+      "review_findings": null
+    },
+    {
+      "run": "r7",
+      "stop_reason": "paused:needs_codex_diagnosis:single_case_mock_smoke",
+      "usage": {
+        "coder": {
+          "calls": 1,
+          "completion_tokens": 5655,
+          "prompt_tokens": 8296,
+          "total_tokens": 13951
+        }
+      },
+      "test_exit_codes": [
+        0
+      ],
+      "review_findings": [
+        "Fallback-write failure does not reliably propagate as required. _write_report re-raises it, but run_case catches it in `except Exception` and calls _fail, retrying persistence and replacing the primary reason with `unexpected error`. If that retry succeeds, run_case returns instead of propagating the fallback failure. Keep persistence failures outside that catch or explicitly re-raise them. The supplied 19-test evidence does not cover failure of both the initial and fallback report writes."
+      ]
+    },
+    {
+      "run": "r8",
+      "stop_reason": "completed",
+      "usage": {
+        "coder": {
+          "calls": 1,
+          "completion_tokens": 5693,
+          "prompt_tokens": 8446,
+          "total_tokens": 14139
+        }
+      },
+      "test_exit_codes": [
+        0
+      ],
+      "review_findings": [
+        "The explicit outer OSError re-raise prevents a third report-write attempt and allows CLI failure to return nonzero.",
+        "Supplied immutable-test evidence records all 20 tests passing, including exactly two failed report-write attempts, with unchanged source hashes. Approval covers this bounded repair only."
+      ]
+    },
+    {
+      "run": "r9",
+      "stop_reason": "completed",
+      "usage": {
+        "coder": {
+          "calls": 1,
+          "completion_tokens": 5817,
+          "prompt_tokens": 8756,
+          "total_tokens": 14573
+        }
+      },
+      "test_exit_codes": [
+        0
+      ],
+      "review_findings": [
+        "The bounded repair preserves returned JSON null and partial result checks, separates adapter failures from validation failures, and retains the persistence exception boundary.",
+        "Supplied controller evidence reports 22 tests passing. Tests were not rerun in this read-only review; approval covers the bounded implementation repair, not archival or remote-upload completion."
+      ]
+    },
+    {
+      "run": "r10",
+      "stop_reason": "paused:needs_codex_diagnosis:single_case_mock_smoke",
+      "usage": {
+        "coder": {
+          "calls": 1,
+          "completion_tokens": 6431,
+          "prompt_tokens": 9069,
+          "total_tokens": 15500
+        }
+      },
+      "test_exit_codes": [
+        0
+      ],
+      "review_findings": [
+        "The TP provenance repair is present, and supplied controller evidence reports all 23 tests passing. Tests were not rerun in this read-only review.",
+        "Whole-milestone acceptance remains insufficiently evidenced: no RED-before-builder record, archived CLI demonstration in experiments/main-smoke-20261106, or scoped commit and verified remote SHA was supplied. These are acceptance evidence gaps, not demonstrated implementation failures."
+      ]
+    },
+    {
+      "run": "r11",
+      "stop_reason": "completed",
+      "usage": {
+        "coder": {
+          "calls": 1,
+          "completion_tokens": 6493,
+          "prompt_tokens": 9726,
+          "total_tokens": 16219
+        }
+      },
+      "test_exit_codes": [
+        0
+      ],
+      "review_findings": [
+        "No blocking defects found in the complete implementation against the supplied acceptance criteria and 24 fixed tests.",
+        "Source/checker identities are initialized before config reads and retained when config is missing.",
+        "Supplied controller evidence reports 24 tests passing; tests were not rerun in this read-only review.",
+        "Approval covers the mock engineering code gate only. Fresh CLI/archive verification remains coordinator follow-up; physical_acceptance remains false."
+      ]
+    },
+    {
+      "run": "transport-bootstrap",
+      "stop_reason": "paused:needs_codex_diagnosis:explicit_thinking_transport",
+      "usage": {
+        "coder": {
+          "calls": 1,
+          "completion_tokens": 1777,
+          "prompt_tokens": 640,
+          "total_tokens": 2417
+        }
+      },
+      "test_exit_codes": null,
+      "review_findings": null
+    }
+  ],
+  "new_deepseek_launches": 12,
+  "tracked_project_deepseek_total": 62,
+  "project_limit": 88,
+  "new_scientific_full_fits": 0
+}

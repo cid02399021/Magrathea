@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "origin": "SYNTHETIC_FIXTURE",
+  "units": {
+    "mass": "M_earth",
+    "pressure": "bar",
+    "temperature": "K"
+  },
+  "mass_earth": 8.0,
+  "fractions": {
+    "iron": 0.5,
+    "silicate": 0.55,
+    "water": 0.19,
+    "hhe": 0.01
+  },
+  "outer_pressure_bar": 1.0,
+  "outer_temperature_K": 300.0,
+  "tp_profile_file": "main-smoke-tp.csv"
+}
