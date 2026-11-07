@@ -435,6 +435,8 @@ int main(int argc, char* argv[])
     Comp[3]=atm1;
   else if (atm_phasedgm=="gas_fixed_mu2")
     Comp[3]=atm_fixed_mu2;
+  else if (atm_phasedgm=="gas_hhe_prescribed")
+    Comp[3]=atm_hhe_prescribed;
   else
     cout<<"atm_phasedgm does not exist, using default"<<endl;
 
@@ -457,6 +459,10 @@ int main(int argc, char* argv[])
       double T_surface_from_tp = surface_state.temperature_K;
       if (fabs(T_surface_from_tp - Tgap[3]) > 1e-12 * std::max(1.0, fabs(Tgap[3]))) {
         throw std::runtime_error("TP profile surface temperature does not match surface_temp");
+      }
+      // For gas_hhe_prescribed, configure prescribed H/He audit before model construction.
+      if (atm_phasedgm == "gas_hhe_prescribed") {
+        configure_prescribed_hhe_audit();
       }
     } catch (std::exception& e) {
       std::cout << "\nException: " << e.what() << "\n";
@@ -506,7 +512,11 @@ int main(int argc, char* argv[])
       {
         try
         {
-          write_tp_diagnostics(outputfile, *planet, *tp_profile, P_surface, Tgap[3]);
+          std::string diag_selector = "gas_fixed_mu2";
+          if (atm_phasedgm == "gas_hhe_prescribed") {
+            diag_selector = "gas_hhe_prescribed";
+          }
+          write_tp_diagnostics(outputfile, *planet, *tp_profile, P_surface, Tgap[3], diag_selector);
         }
         catch (const std::exception& e)
         {

@@ -1,0 +1,10 @@
+{
+  "mass_earth": 8.04,
+  "fractions": [
+    0.299997,
+    0,
+    0.699993,
+    1e-05
+  ],
+  "surface_pressure_cgs": 100000.0
+}

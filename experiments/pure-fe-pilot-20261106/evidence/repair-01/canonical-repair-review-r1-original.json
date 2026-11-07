@@ -1,0 +1,21 @@
+{
+  "approved": false,
+  "blocking_findings": [
+    "repair-identity.json does not bind the canonical patch's actual bytes: recorded SHA256 bc37c3d69fe2adfcbacf986ca072b76d10c19e0af04cb85e3c328091a8fccfa8; actual SHA256 6dffa4894380b4bd48727d841b89a1ef62f1e753c8228f6d636060b6dafc5370. The recorded hash matches LF-normalized content; the file uses CRLF. Correct this metadata binding before READYFORNEWSINGLEVALIDATIONONLY."
+  ],
+  "verified_evidence": [
+    "Baseline and candidate SHA256 values match repair-identity.json; all 40 candidate manifest hashes match.",
+    "The sole source change is density(y[1], Tt, -1) to density(y[1], y[2], -1), consistent with phase selection and stored temperature.",
+    "Other manifest-covered sources, EOS tables, thermal closures and thresholds are unchanged.",
+    "Canonical patch matches regenerated difflib content after newline normalization. Fresh read-only git apply --numstat and --check succeed, with one addition and one deletion.",
+    "Recorded validation reports 144 passing probes, synthetic interface density error zero and successful main build.",
+    "Regression uses synthetic EOS callbacks and a direct constructor, not an observed planet fit.",
+    "Original rejection and failed workflow status remain intact."
+  ],
+  "limits": [
+    "No files changed; no tests, builds, planet/model runs or API calls executed.",
+    "RED log access was denied; reported old error 0.00233805 was not independently verified.",
+    "Campaign counts, budget and original planet-output retention were not independently verified.",
+    "No empirical physics claim. Any subsequent approval is limited to READYFORNEWSINGLEVALIDATIONONLY."
+  ]
+}

@@ -1,6 +1,7 @@
 #ifndef TP_DIAGNOSTICS_H_
 #define TP_DIAGNOSTICS_H_
 
+#include <map>
 #include <string>
 
 class hydro;
@@ -10,7 +11,8 @@ class TPProfile;
 // model/diagnostics or I/O errors. Removes any prior sidecar first.
 void write_tp_diagnostics(const std::string& output_file, hydro& model,
                           const TPProfile& tp, double surfaceP_cgs,
-                          double surfaceT_K);
+                          double surfaceT_K,
+                          const std::string& selector = "gas_fixed_mu2");
 
 // Remove the generated .tp.json sidecar. ENOENT is ignored; other errors throw.
 void remove_tp_sidecar(const std::string& output_file);

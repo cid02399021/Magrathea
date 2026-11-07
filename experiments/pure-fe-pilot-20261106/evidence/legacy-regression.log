@@ -1,0 +1,20 @@
+mkdir -p tests/.build
+g++  -std=c++11 -Wall -Isrc -o tests/.build/test-tp-settings src/tp_settings.cpp src/parser.cpp tests/test_tp_settings.cpp
+tests/.build/test-tp-settings tests/.build
+Independent settings acceptance: 28 assertions passed
+mkdir -p tests/.build
+g++  -std=c++11 -O2 -Isrc tests/test_tp_diagnostics.cpp src/tp_diagnostics.cpp src/hydro.cpp src/EOS.cpp src/EOSlist.cpp src/phase.cpp src/tp_profile.cpp src/tp_stepper.cpp -L/usr/local/lib -lgsl -lgslcblas -lm  -o tests/.build/test-tp-diagnostics
+tests/.build/test-tp-diagnostics tests/.build
+Diagnostic writer I/O fixture: 8 checks passed; simulated solver status only
+mkdir -p tests/.build
+g++  -std=c++11 -O2 -Isrc tests/test_tp_wrong_phase.cpp src/tp_diagnostics.cpp src/hydro.cpp src/EOS.cpp src/EOSlist.cpp src/phase.cpp src/tp_profile.cpp src/tp_stepper.cpp -L/usr/local/lib -lgsl -lgslcblas -lm  -o tests/.build/test-tp-wrong-phase
+tests/.build/test-tp-wrong-phase tests/.build
+constructor rows=158 status=2 error=
+gas_base_P=32493033270.553379 Gas_boundary_rows=1 deep_Gas_rows=20 near_surface_Gas_iso_rows=8
+writer_error=Non-Gas phase inside gas mass interval
+PASS wrong-phase serialization guard
+tests/test_tp_settings.cpp: In function ‘int main(int, char**)’:
+tests/test_tp_settings.cpp:24:25: warning: loop variable ‘s’ of type ‘const std::string&’ {aka ‘const std::__cxx11::basic_string<char>&’} binds to a temporary constructed from type ‘const char* const’ [-Wrange-loop-construct]
+   24 |  for(const std::string& s:{"","\"\"","123","\"a b.csv\"","\"a\tb\"","\"broken","\"x\"junk","\"D:relative\""})rejects([&]{tp_settings::validate_raw_tp_path_value(s);},"malformed raw path");
+      |                         ^
+tests/test_tp_settings.cpp:24:25: note: use non-reference type ‘const std::string’ {aka ‘const std::__cxx11::basic_string<char>’} to make the copy explicit or ‘const char* const&’ to prevent copying

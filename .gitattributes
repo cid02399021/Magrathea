@@ -10,3 +10,26 @@ docs/superpowers/plans/2026-11-06-main-smoke.md -text whitespace=cr-at-eol
 # Preserve reviewed external-TP bridge contracts and tests.
 tests/test_tp_import.py -text whitespace=cr-at-eol
 docs/superpowers/plans/2026-11-06-external-tp-real-bridge.md -text whitespace=cr-at-eol
+
+# Preserve reviewed pure-Fe pilot code/acceptance bytes.
+src/EOS.h -text whitespace=cr-at-eol
+src/EOS.cpp -text whitespace=cr-at-eol
+src/phase.h -text whitespace=cr-at-eol
+src/phase.cpp -text whitespace=cr-at-eol
+src/main.cpp -text whitespace=cr-at-eol
+src/tp_settings.cpp -text whitespace=cr-at-eol
+src/tp_diagnostics.h -text whitespace=cr-at-eol
+src/tp_diagnostics.cpp -text whitespace=cr-at-eol
+src/hydro.h -text whitespace=cr-at-eol
+workflow/pilot_grid.py -text whitespace=cr-at-eol
+workflow/examples/toi732c-pilot.json -text whitespace=cr-at-eol
+tests/check_pilot_model.py -text whitespace=cr-at-eol
+tests/check_tp_model.py -text whitespace=cr-at-eol
+experiments/pure-fe-pilot-20261106/run_pilot.py -text whitespace=cr-at-eol
+tests/test_pilot_eos.cpp -text whitespace=cr-at-eol
+tests/test_pilot_grid.py -text whitespace=cr-at-eol
+tests/test_pilot_controller.py -text whitespace=cr-at-eol
+tests/check_pilot_patch.py -text whitespace=cr-at-eol
+docs/superpowers/plans/2026-11-06-pure-fe-coarse-pilot.md -text whitespace=cr-at-eol
+src/hydro.cpp -text whitespace=cr-at-eol
+tests/test_interface_temperature.cpp -text whitespace=cr-at-eol

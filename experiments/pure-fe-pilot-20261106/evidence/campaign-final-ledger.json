@@ -1,0 +1,671 @@
+{
+  "limit": 36,
+  "attempts": [
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run01",
+      "case": "single-01",
+      "fractions": [
+        0.3,
+        0,
+        0.699,
+        0.001
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "f52707f052891edc8f4bf3841eeecf131bde7c8682c72645ba42ec6e38a91a02",
+        "run.cfg": "c244545783d337e1e9eb138446a946fc55f1671f71bbd111b73b97e79ccc2192",
+        "stdout.log": "04b5d4afe8befb799499f216919cdde8ce4d9c44a5732526d7c21d9602f9b57b",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "cd62d0c9823e57db9edb0b50ab6a029cf0df2b547aa45dc8993454a682aa037e",
+        "model.dat.tp.json": "0d444616f651c2913ddcd261bc3e0edce8b139e2b010ebe1ee11ee750a62f0cd",
+        "acceptance.json": "4357c1bf90db8d1d790061eafd668354e691f19799a03690035516435294898c"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run01",
+      "case": "single-02",
+      "fractions": [
+        0.1,
+        0,
+        0.8999,
+        0.0001
+      ],
+      "tight": false,
+      "status": "FAILED",
+      "reason": "stored density/temperature consistency (0.004011031380637084, 4.36961549165839e-16, 1.6240977035903091e-16)",
+      "artifact_sha256": {
+        "case.json": "766a358f6d7e99af952e98f18b89e6ab979eeee28cec0371717aaab2cf8e5c46",
+        "run.cfg": "ce1fc7e5fc6f945dfbf7fe4ea3b5f902f7ca26e62d9eb381fe721ba9829e6992",
+        "stdout.log": "af21e112e19ca81b43367e8d9f6f8ace7b872729849d5ec5d3ef2393eeee6c9f",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "4fd11bcf720b79f03a59913803cb15c3f7918bcc522e3c4e6f7f95a89927942f",
+        "model.dat.tp.json": "12019fb5b05439168cf91a64f9a97a8be0410af9d7b064eb855406751d48122a",
+        "acceptance.json": "df438f651b64cf3ddf6d963645995123d528eed8f9abc83a9c83eace6e832686"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "single-01",
+      "fractions": [
+        0.3,
+        0,
+        0.699,
+        0.001
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "f52707f052891edc8f4bf3841eeecf131bde7c8682c72645ba42ec6e38a91a02",
+        "run.cfg": "0c72f2e717b6110f095394b44a8eac4fbbf371ca80645d016d588923f1ef857b",
+        "stdout.log": "2afff2f6f20cc99b5de18b8cca894923992dd465e002cbd58ad83f6b3278a599",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "cd62d0c9823e57db9edb0b50ab6a029cf0df2b547aa45dc8993454a682aa037e",
+        "model.dat.tp.json": "0d444616f651c2913ddcd261bc3e0edce8b139e2b010ebe1ee11ee750a62f0cd",
+        "acceptance.json": "4357c1bf90db8d1d790061eafd668354e691f19799a03690035516435294898c"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "single-02",
+      "fractions": [
+        0.1,
+        0,
+        0.8999,
+        0.0001
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "766a358f6d7e99af952e98f18b89e6ab979eeee28cec0371717aaab2cf8e5c46",
+        "run.cfg": "847605284f585cdeeb5b03e02c62bea1bcef41185c69b61c073cc3f9a78eea63",
+        "stdout.log": "a30795928ec5ba7342a7c33ccbb7568cbcde669784c33fd8b4f0d11dd7c9d998",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "d4779284178ab5afb636c5e33d7e33e1620880e1f329fa23f48bdc0c2edfc384",
+        "model.dat.tp.json": "2b1814fc54ebb3ed293156825782b4e0424df717b3626dc7874f753f76976696",
+        "acceptance.json": "8360322819a1f6e1c2b93a18c54fedc122ea08ffa86f8d1bbe7dbcb591be38cc"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "single-03",
+      "fractions": [
+        0.9999,
+        0,
+        0,
+        0.0001
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "c70a3cb1bc86e2853ae6c9f76dbb38a550a0d1d197894d49d1a85b26b5837591",
+        "run.cfg": "a26573edc99345c318f17190044ba39e2085f87bb3e6429641ed9df2cdaabfbc",
+        "stdout.log": "ebdf5df41eab5af39426530aa3bde8cbdaa1deaadc84b57c34f9cc19231feb8c",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "2e932abfe2b2a36b085cb0f835e4729b312b27e64b743df5ad3734cdfddfba5a",
+        "model.dat.tp.json": "df386b67b788c700fa337df8cdb6cf1609520284a534a6b5d00cb224e64fe375",
+        "acceptance.json": "668dfd69614891540affcb1c0649e833a0b2c3a2257ea7f727b8342b82bb0e49"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "single-04",
+      "fractions": [
+        0.5,
+        0,
+        0.49999,
+        1e-05
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "b3c28a19e6d1b332da07ee436b27336c5c4f29cf6666da4ea9e5da0f72c13051",
+        "run.cfg": "63dee0b8dadde4979779dd4dab069479700fb1c6ab5a30bea835ace749ccc9ea",
+        "stdout.log": "fd975a73cebc1b975f14362580224f87d3099b50d40e30bfa4d52c9842eddadb",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "39dfa355d05b0c0ec1ba64d406060c922967f0c04eeeaafcfe35a6306c6e9d6b",
+        "model.dat.tp.json": "e5e83cb7425721700a6925f6619870751d363ce078b6502784d7d5f712772daf",
+        "acceptance.json": "7e1939b0e8216fffc01a0978d8bb4c829adeb8b13f7c186ea21acda735a66bfc"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "single-05",
+      "fractions": [
+        0.3,
+        0,
+        0.699,
+        0.001
+      ],
+      "tight": true,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "f52707f052891edc8f4bf3841eeecf131bde7c8682c72645ba42ec6e38a91a02",
+        "run.cfg": "6d6c8e7cd5a31cbd3fc5e9d118655d9de3c8aa3281c46a7e4f341f90745b4365",
+        "stdout.log": "ab9c5255f8a49a45b4dc85029de5f03732a9e1df96ac6214eb53e24d9feb084e",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "9fce980db812dc1d43e54ce09e3e40ff571162edf6745afecf7ae263716a1c80",
+        "model.dat.tp.json": "5f9bb8ffcf97819b30655d208cdd20d74ab508fca1a8971ed98ca90836f85950",
+        "acceptance.json": "93edb130915e4e8440960bbe811e5b384d19306132a28fb5852521580c54be5a"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-01",
+      "fractions": [
+        0.099999,
+        0,
+        0.8999910000000001,
+        1e-05
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "f03140ee83e5e9e91b972ad755ed567e7a6246b1d9a7cffae0573f99a9e2fbfa",
+        "run.cfg": "aa023d6c3f2282c91bff5e830e80233e8cca2dfcf6b44831514569240cb47e25",
+        "stdout.log": "186548243e465debb192e8ed0fc2a31e1d553967b71a252b72ed45a2bcca3a30",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "0bcf32d714cd25d70c53df7e6c1280e894975300f63f6642b683c8eac4b3280b",
+        "model.dat.tp.json": "cfff323346a42f7e91b7a5a0d0f9fb72835387c3afc4bf27770a4602e3427b07",
+        "acceptance.json": "0cb1418b37c9979f69953b0905849fbb8e06c35fdc0c5d2300e57c2ecd865092"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-02",
+      "fractions": [
+        0.299997,
+        0,
+        0.699993,
+        1e-05
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "df81891287353108c816511ec2f141a254d6d0f84b68bb832acf7591af0ecc00",
+        "run.cfg": "a7e46db7f83342a2d14821dc6313cc05e7fff8ca25373eeb055133c57d383a85",
+        "stdout.log": "c006ee0ab3dbdb9139f1941f951eab9894e7fc2765ab54f7d95c314e6733aa7f",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "de2d4e616981ae74fd68ad5a1c4b462e38d0b4f0c4b843d51f8155c80d9e33e1",
+        "model.dat.tp.json": "f913fac56d21bc9b36dffb81139930c5d6d4fc592b0430e38d035db45e9c8ae2",
+        "acceptance.json": "00108471d5f2bddbe14af63c3c740b3ffc8ac2306b553af96096fa4139d6274d"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-03",
+      "fractions": [
+        0.499995,
+        0,
+        0.499995,
+        1e-05
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "d080496a73cb62463bce20fcff0a6cc299fb4e8ca0401e902c29f8fc6cdd03e0",
+        "run.cfg": "6c859231fd9a4e301f4aa3dc6b008958c461beeb2ef7e2ade553d1004597fc18",
+        "stdout.log": "2d373895a4fe83cdf388f3b6898e94d123d80cbf0cee37c38dbafdd696f8b7f5",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "96faee565a06a4f80b7bcea7403f8d7c46eb3669c290eb5ed936071ae732981e",
+        "model.dat.tp.json": "21451564490303d538fa36e0bdec113480ea9b576562e7e74675073a3f9aeb22",
+        "acceptance.json": "b25c49c2f582198990318f89c812137e564488ca559cfa2e177a5ee7ce2f98ff"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-04",
+      "fractions": [
+        0.699993,
+        0,
+        0.29999700000000007,
+        1e-05
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "f8fa105840498a0c7116c9ef0e92ac1655bca26d21f52839e81d4d6a9538740f",
+        "run.cfg": "69d13bef73691c8fdf3594530c186bf070379ec8a444d697ea4e5aeaf3332b06",
+        "stdout.log": "e7b356319b67e71b89094b3bad403b479f39d91d0951c2a7ca4b3a451eb4ab7c",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "e05dbb09d2a67ab6911a80b68cd0a97b13b9d95fb756cf22a05cea88a77da191",
+        "model.dat.tp.json": "c7418563e28c0455d1a32bc2367de06d310bbd814b013ce79c3e094e9fe5657c",
+        "acceptance.json": "47906334392b900d436d891de0ab3e1279f556900fdd8b9930201278c504aa52"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-05",
+      "fractions": [
+        0.8999910000000001,
+        0,
+        0.09999899999999998,
+        1e-05
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "0458c6d2a8aafbda2b298cf65444c24d4621b07c7db8a5eaa85556ba846f754b",
+        "run.cfg": "0ed864449378961d823bae109d9abb1bc97b64ffe43e64b169914ecb4ff6d541",
+        "stdout.log": "caa25b55d71edd960b592111d8069c27ade97f25727afb6d96b5ddbe50e6a079",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "d2b79ff1c4f66feb439296e963cdf9894569b3b2cb9171a88f89e3176a485a7d",
+        "model.dat.tp.json": "fdba361c7d9a2e3ced0204d888c849181f6e638a009cccdb56c4ca57a2caaee5",
+        "acceptance.json": "9997d3f2e7a57cfd8f84b5c1dae44fb88cec68a0567ae22f9587b20b3d2205af"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-06",
+      "fractions": [
+        0.99999,
+        0,
+        0.0,
+        1e-05
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "f809b48dac5721e71283a1fcb65ce2c0bf2f0106fd3a2459fa5c4a5d500039ab",
+        "run.cfg": "554ee9c9db9232397e768ba219bda94ef81521c1996a6370df56e487089b2ae4",
+        "stdout.log": "7c54d4ba2be866b4ba45a8302b49093e604c8702a3d2d698703ea7f6a0061d88",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "40e6d67037d94bb2a5af2aa06087f655364d67d8d35445e1af55b20b473c853a",
+        "model.dat.tp.json": "b63307341d19d891086357752d27cbcadfd93db32c410c5cb5c621a25e1e3b53",
+        "acceptance.json": "9ad8c3e13c7d7dea7a79861c4e1f17a1a241e5bd5056e32ee00837a579cc6c07"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-07",
+      "fractions": [
+        0.09999000000000001,
+        0,
+        0.89991,
+        0.0001
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "0d777a478fb777b01b4a080e972bef169b3e180cd2fdd2c6b777c25aeba53d4c",
+        "run.cfg": "d3e74de0f62fd05f1c95dc8dfe0be19b2fbe7a05a84c9d40ee0c00575f677ca6",
+        "stdout.log": "4893d8a3f8d2c0e315f00d72e69868fa02d69b7274bd32af7c76b481acc687d8",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "c3adb428446326eeeb4fce827f90d6b3bcce3519aa91fcb543790f90fbe16908",
+        "model.dat.tp.json": "94d7f4b35bcae4444325a0273fe1fcf1d50d2cd87c62270bdc2d150331e21bb5",
+        "acceptance.json": "69dea2bf5b7fd21d293d049e62c42d3bd68f2eda7ee291bb5874fd7d868325ae"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-08",
+      "fractions": [
+        0.29997,
+        0,
+        0.6999299999999999,
+        0.0001
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "6c4bd8362384fc8cfb13e6edf42075333e85f9f253305fef207701c01b956f3d",
+        "run.cfg": "03d3b44fc96efcef087938e710fd28f6d8c6f7d63d00cc2c3f89d9fe97189e10",
+        "stdout.log": "c4517e631a9e070542282b7d5b78ef86bd09f4ae958fa59864dbe6a6efaf4c96",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "87d723869b20bf6cc3f804c3174a71983b77c0135b94fc2fe9dec12bac4d146f",
+        "model.dat.tp.json": "d4ff3544f262576436e8cf5a9e4311c183b06e99ae3b3c02a1165b4de988bdf5",
+        "acceptance.json": "3dca5a5151c533744f9959073539aaa7ea42e1882c845d30327bbc0065b9895d"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-09",
+      "fractions": [
+        0.49995,
+        0,
+        0.49995,
+        0.0001
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "41ceac45da42941a51fe2221c43260fb0cc2e865cc1af640a03fd2bbc8d5723b",
+        "run.cfg": "3b176fc30addc9bf14eb1d7d445c5996234f4be6a81ef4f018e5006112ed9403",
+        "stdout.log": "753e324d00675cc442d548055b5ba14f7c484447f75cece3a336b5baa2a3ee6a",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "4cbce00c16fcb962763fabe3381c98d061472f7c5489e1f342698f447e2c5c9d",
+        "model.dat.tp.json": "4ab4731f93226c7c9e8315f287d61d2c2cef44acc9b654257f75cfce45097ad9",
+        "acceptance.json": "b9e9d9c9692968e428672ec8f61f11bc4b388564b7d1c80bdc78e1fb29455989"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-10",
+      "fractions": [
+        0.6999299999999999,
+        0,
+        0.29997000000000007,
+        0.0001
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "3646a74036ef5aaadf51636d96c19a8df81fdbdf4b8852555d67232de3020ae2",
+        "run.cfg": "4bab33e6c4e4b9334c91ff303628686868653982f94969b68436aaf17b2eb9f3",
+        "stdout.log": "0fe31e87919b9faf98c6fdf5ec1dd53f2c3be82dcbbb18ee5bdc9117b8c46715",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "26d24154446032a600231cca4052fe700894932d130ba6b8290f175c09243b4d",
+        "model.dat.tp.json": "6c830c4f7e3da673f755559332b3e31e8b85cb2f81052c27b671ff9ea6e9d7d5",
+        "acceptance.json": "d812cede2e836b8fa71ae37c17f2700af595f86600f91eb482a63d3c5c628584"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-11",
+      "fractions": [
+        0.89991,
+        0,
+        0.09998999999999998,
+        0.0001
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "de68f0e0b480e90303a25c651aaf4b680483fbeb2c1a5491a1c39f355ce5d036",
+        "run.cfg": "945a17939373a0751ffd24329ba8efafba10b7c05ff6869bad64860974fd4217",
+        "stdout.log": "aff18d3b0147622c2b21dcde1ad365b4fc3c472f2ffb64389bea313a2ede53e1",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "e79687d31835eacc6531ecf0dc7162ce88a97290aebac78864f4d3375f2ab2d8",
+        "model.dat.tp.json": "63ee9ce4a10c6db1591efb9f80397b98c935585e92f1f8aa2c3df8b017c82e43",
+        "acceptance.json": "79ae731fb727e1bfed0113e924b509d57603254015d08ad58664e3963c041b68"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-12",
+      "fractions": [
+        0.9999,
+        0,
+        0.0,
+        0.0001
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "6b1eed1fa624b5833c3ff7bd4210271e9c37eb3d60888512bb6679682cd108eb",
+        "run.cfg": "092152213abf4ce90a7b49de6f387742362d09df08a081453411d959121bcb76",
+        "stdout.log": "6be1c3e7588a90f5a474e2fd64073caf568ee8b83d6ba4df6729ae86333d7ecd",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "2e932abfe2b2a36b085cb0f835e4729b312b27e64b743df5ad3734cdfddfba5a",
+        "model.dat.tp.json": "df386b67b788c700fa337df8cdb6cf1609520284a534a6b5d00cb224e64fe375",
+        "acceptance.json": "668dfd69614891540affcb1c0649e833a0b2c3a2257ea7f727b8342b82bb0e49"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-13",
+      "fractions": [
+        0.0999,
+        0,
+        0.8991,
+        0.001
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "1619f00c23f9883f8067de40f81aa519ee2923674ab4d33e06fa2c9bc379db9d",
+        "run.cfg": "630beb6a737437a9c274be99714f8f29bae51c19e562eec7a91ac11963bd1699",
+        "stdout.log": "b612895cf7f2f39053221a107e0ab24854f4680a69dedf73208f13b77db3f27b",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "65753d543bae3419b46c9528f95add6cde2c79b064c9f41974b6d6688686dc32",
+        "model.dat.tp.json": "aefe72b66b45719af30c500ddf014d0e27c0849a00b606f7b8f5dae4d399731b",
+        "acceptance.json": "830ad7fc330324352aadd0c9b5fe048bd378bbc66f2b046bd0cc6ccdd73d7ca9"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-14",
+      "fractions": [
+        0.29969999999999997,
+        0,
+        0.6992999999999999,
+        0.001
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "339c49a24097e19c17a78b707a217e8cfd8a7b6fb98e3c7a6faa84af012e6ef7",
+        "run.cfg": "6f36736d8f3c486349ede0ddc0d7b353b21bc35d48c8f1e0a109215f85aacfec",
+        "stdout.log": "bc4436a369f6f593b966a0e9b866481e406dbdc950be59d96cdd1768f2b74d55",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "65ed9fe27e96eb803c45b5cfb7c1ca1c2a8e313584bf2adcdc3310a2b55cdd39",
+        "model.dat.tp.json": "d501a7e5d604f7b00120362991379979a8cd2e70570085920f7e7e569d4b3ec3",
+        "acceptance.json": "8c49ade1c4265de12d40831563d3067ff747761d6519132a8df87424fa0491c9"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-15",
+      "fractions": [
+        0.4995,
+        0,
+        0.4995,
+        0.001
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "3553ad21dc5c0b8a0c134c0892dd32abe674a318ba5481129f6ea30b83af9f5d",
+        "run.cfg": "2cf2b8868ef133d4f8a4773ac4974380d52101479dd28b66c0d2ee597c783a72",
+        "stdout.log": "e8eafa00792f70385e9d34772451d38c1397fe648a2cec572b145a983897f258",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "b6694605e0d5cb52cf53cbb856cb8df859ff3b0e6acae905aadc7a181031b80b",
+        "model.dat.tp.json": "52e8a58d6dbb5a5271e3e2cdc51c8196625535a12d328eee59a4dc4b2632c165",
+        "acceptance.json": "1bf0915cc0316ddbef6cb33dc0367f953397b4a0b05f5cdbfbf3ad21801450d9"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-16",
+      "fractions": [
+        0.6992999999999999,
+        0,
+        0.2997,
+        0.001
+      ],
+      "tight": false,
+      "status": "PASS_CONDITIONAL_NUMERICAL",
+      "reason": null,
+      "artifact_sha256": {
+        "case.json": "05895b2db82ec8b462f27627190f74c00d9e75a21a7061daf6e2effb60df935b",
+        "run.cfg": "17300754919a3e898c12fc045a0b2591ed6fe4cee3991b0fefb05fc2c20f9915",
+        "stdout.log": "eb6ef4fb75392ae427044ed2e4f84c9e0ec2048a434485fa7fdaa150ea1741c9",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model.dat": "666427c61c924ef9a06d54a7f639fdf4e9423d9a269a16b593c551e9b03c4606",
+        "model.dat.tp.json": "bff4cba0a718b981e3b7163dc09d45f77041d1eee5a1205dffcdcc0966929a9d",
+        "acceptance.json": "75cbb536351e0252aba528d9d9d828c5aa831b5f39926530d265a33b8a0ed4c6"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-17",
+      "fractions": [
+        0.8991,
+        0,
+        0.09989999999999997,
+        0.001
+      ],
+      "tight": false,
+      "status": "FAILED",
+      "reason": "Native exit 1",
+      "artifact_sha256": {
+        "case.json": "aa0ec9b7fd60608d3cd6604ab3d9c1de50c7186bd81f22711386ca123a877d46",
+        "run.cfg": "57de658f76aba599f242a5948912f65a7b31375a909b59fd117d0d1b61d8b4c6",
+        "stdout.log": "4ab6237a93fb4326e5c595f8fccc363bdec8af7fd45a931a188a904d4d54827b",
+        "stderr.log": "dc3b2eb26672db8db50ba55d553a7af3969ab1cb9931c6213ab3cf74514d554e",
+        "acceptance.json": "2d6c70bee72d48a9084b1011940a390cf88dcedd0903815a6e7003bd659d3a14"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-18",
+      "fractions": [
+        0.999,
+        0,
+        0.0,
+        0.001
+      ],
+      "tight": false,
+      "status": "FAILED",
+      "reason": "Native exit 1",
+      "artifact_sha256": {
+        "case.json": "cd1d65a1a08ec182e2e36bfcf8cf89d3c24c34ee8db230a903bf99d87b62e50c",
+        "run.cfg": "28e462bc7b452f03db012730fa0c2eff215ea4b54404e463d9ac0411c6da17fb",
+        "stdout.log": "dec1eb9bead9bb53d52adae4d34ff1c87c6e4d65eadb2feb4ae90e4c625a702b",
+        "stderr.log": "dc3b2eb26672db8db50ba55d553a7af3969ab1cb9931c6213ab3cf74514d554e",
+        "acceptance.json": "2d6c70bee72d48a9084b1011940a390cf88dcedd0903815a6e7003bd659d3a14"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-19",
+      "fractions": [
+        0.09970000000000001,
+        0,
+        0.8973,
+        0.003
+      ],
+      "tight": false,
+      "status": "FAILED",
+      "reason": "Native exit 1",
+      "artifact_sha256": {
+        "case.json": "f034b76d638bc5b5ce1a8c65b5aef92f41d0ef21b638f643e5874873fbff0fd2",
+        "run.cfg": "bd8fed0bb74fee6df2aa1e78631a5009281d283e5b226af80f11ba688f82c953",
+        "stdout.log": "4c4ce832a90a1643e16d9c89be64fc6462d0ae6c836c4be1cb839f881e5f06c7",
+        "stderr.log": "6cb26e550026c3545a746f532cc4b7473033006d8db3f9f35f84c85b724c1bb7",
+        "acceptance.json": "2d6c70bee72d48a9084b1011940a390cf88dcedd0903815a6e7003bd659d3a14"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-20",
+      "fractions": [
+        0.2991,
+        0,
+        0.6979,
+        0.003
+      ],
+      "tight": false,
+      "status": "FAILED",
+      "reason": "Native exit 1",
+      "artifact_sha256": {
+        "case.json": "c9e42f8bcd4e9b8e5949259f4c20486bd356594423f5efc8c40b78eb80224adf",
+        "run.cfg": "151a328b4d40bbd14e39d8c1d626ac671f02d0bbec5cb9d5fa4d6ba2b813eab5",
+        "stdout.log": "1eb6cfa992584593b20254457c54df979807170f2d2d824c03ba47f860527144",
+        "stderr.log": "6cb26e550026c3545a746f532cc4b7473033006d8db3f9f35f84c85b724c1bb7",
+        "acceptance.json": "2d6c70bee72d48a9084b1011940a390cf88dcedd0903815a6e7003bd659d3a14"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-21",
+      "fractions": [
+        0.4985,
+        0,
+        0.4985,
+        0.003
+      ],
+      "tight": false,
+      "status": "FAILED",
+      "reason": "Native exit 1",
+      "artifact_sha256": {
+        "case.json": "2e423441c7fbe4948591fc2d24f2cfc6be19e3710608b87066b6503e75280a5a",
+        "run.cfg": "255353068fd06398acdb23b34eaf7841d43c53522f98eae316e838a11c484ef7",
+        "stdout.log": "d04c916cf6d418415e09c778b2bc4e95d9a5d9b687c722fbb5a04f3c40264748",
+        "stderr.log": "dc3b2eb26672db8db50ba55d553a7af3969ab1cb9931c6213ab3cf74514d554e",
+        "acceptance.json": "2d6c70bee72d48a9084b1011940a390cf88dcedd0903815a6e7003bd659d3a14"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-22",
+      "fractions": [
+        0.6979,
+        0,
+        0.29910000000000003,
+        0.003
+      ],
+      "tight": false,
+      "status": "FAILED",
+      "reason": "Native exit 1",
+      "artifact_sha256": {
+        "case.json": "361ecd0e6f3b31b50e0f2757376b93fa5df6ff6d05c2bf491397b06ee5f3fb19",
+        "run.cfg": "e883fc47af1cb99975c2c3eac4cbde6405585f268320dd43739a908938dd6396",
+        "stdout.log": "ed0f39200fa7f190636e026a1bbc8583b137b4de37c8f916794f855b54feda96",
+        "stderr.log": "dc3b2eb26672db8db50ba55d553a7af3969ab1cb9931c6213ab3cf74514d554e",
+        "acceptance.json": "2d6c70bee72d48a9084b1011940a390cf88dcedd0903815a6e7003bd659d3a14"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-23",
+      "fractions": [
+        0.8973,
+        0,
+        0.09969999999999998,
+        0.003
+      ],
+      "tight": false,
+      "status": "FAILED",
+      "reason": "Native exit 1",
+      "artifact_sha256": {
+        "case.json": "a4671721ade74de83f05a38169879eed8045d0ccbf6df5fc618cc12ce1516788",
+        "run.cfg": "1e26a22095c2e2abc8b2fa0ea870a5a95ad3337e6289bd2c074f8fa868df579c",
+        "stdout.log": "0d4b481146b23d3a7e17428aeb6cb9acb2a52dae031ed6b096ae01a008b4a72f",
+        "stderr.log": "dc3b2eb26672db8db50ba55d553a7af3969ab1cb9931c6213ab3cf74514d554e",
+        "acceptance.json": "2d6c70bee72d48a9084b1011940a390cf88dcedd0903815a6e7003bd659d3a14"
+      }
+    },
+    {
+      "output": "D:\\Codex\\downloads\\toi732c-pure-fe-pilot-20261106-run02",
+      "case": "grid-24",
+      "fractions": [
+        0.997,
+        0,
+        0.0,
+        0.003
+      ],
+      "tight": false,
+      "status": "FAILED",
+      "reason": "Native exit 1",
+      "artifact_sha256": {
+        "case.json": "17203778ef3fa223369f119915a52c82f41701ff80187fe052f0723eb6a57033",
+        "run.cfg": "9bff96c107837059d4a3d81544c60ffb95737a02313c5857d105d265d642a002",
+        "stdout.log": "750f6743baee756b0e457783e94b1b75604d5034b2a9e533e4280ff5b7d3b944",
+        "stderr.log": "dc3b2eb26672db8db50ba55d553a7af3969ab1cb9931c6213ab3cf74514d554e",
+        "acceptance.json": "2d6c70bee72d48a9084b1011940a390cf88dcedd0903815a6e7003bd659d3a14"
+      }
+    }
+  ]
+}

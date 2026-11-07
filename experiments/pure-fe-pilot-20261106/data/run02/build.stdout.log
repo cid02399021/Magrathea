@@ -1,0 +1,13 @@
+g++  -o src/EOS.o -c src/EOS.cpp -std=c++0x -O3 -Wall  
+g++  -o src/EOSlist.o -c src/EOSlist.cpp -std=c++0x -O3 -Wall  
+g++  -o src/EOSmodify.o -c src/EOSmodify.cpp -std=c++0x -O3 -Wall  
+g++  -o src/compfind.o -c src/compfind.cpp -std=c++0x -O3 -Wall  
+g++  -o src/hydro.o -c src/hydro.cpp -std=c++0x -O3 -Wall  
+g++  -o src/main.o -c src/main.cpp -std=c++0x -O3 -Wall  
+g++  -o src/parser.o -c src/parser.cpp -std=c++0x -O3 -Wall  
+g++  -o src/phase.o -c src/phase.cpp -std=c++0x -O3 -Wall  
+g++  -o src/tp_diagnostics.o -c src/tp_diagnostics.cpp -std=c++0x -O3 -Wall  
+g++  -o src/tp_profile.o -c src/tp_profile.cpp -std=c++0x -O3 -Wall  
+g++  -o src/tp_settings.o -c src/tp_settings.cpp -std=c++0x -O3 -Wall  
+g++  -o src/tp_stepper.o -c src/tp_stepper.cpp -std=c++0x -O3 -Wall  
+g++  -o planet src/EOS.o src/EOSlist.o src/EOSmodify.o src/compfind.o src/hydro.o src/main.o src/parser.o src/phase.o src/tp_diagnostics.o src/tp_profile.o src/tp_settings.o src/tp_stepper.o -L/usr/local/lib -lgsl -lgslcblas -lm  

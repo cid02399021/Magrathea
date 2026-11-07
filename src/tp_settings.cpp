@@ -191,8 +191,8 @@ TPOptions validate(int mode,
                    const std::string& cfg_dir) {
     // If has_tp_option is false, check if atm_phasedgm is gas_fixed_mu2 (must have TP profile)
     if (!has_tp_option) {
-        if (atm_phasedgm == "gas_fixed_mu2") {
-            throw std::runtime_error("tp_profile_file required when atm_phasedgm is gas_fixed_mu2.");
+        if (atm_phasedgm == "gas_fixed_mu2" || atm_phasedgm == "gas_hhe_prescribed") {
+            throw std::runtime_error("tp_profile_file required when atm_phasedgm is gas_fixed_mu2 or gas_hhe_prescribed.");
         }
         return TPOptions(false, "");
     }
@@ -201,9 +201,9 @@ TPOptions validate(int mode,
     if (mode != 0) {
         throw std::runtime_error("tp_profile_file can only be used with input_mode=0.");
     }
-    // Require atmosphere selector gas_fixed_mu2
-    if (atm_phasedgm != "gas_fixed_mu2") {
-        throw std::runtime_error("tp_profile_file requires atm_phasedgm=gas_fixed_mu2.");
+    // Require atmosphere selector gas_fixed_mu2 or gas_hhe_prescribed
+    if (atm_phasedgm != "gas_fixed_mu2" && atm_phasedgm != "gas_hhe_prescribed") {
+        throw std::runtime_error("tp_profile_file requires atm_phasedgm=gas_fixed_mu2 or gas_hhe_prescribed.");
     }
 
     // Validate mass values: individual finite nonnegative

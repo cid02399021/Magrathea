@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "base": "26b7b72",
+  "branch": "run",
+  "campaign_id": "pure-fe-pilot-20261106",
+  "scenario": "EXAMPLE_TP_CONDITIONAL_PILOT",
+  "physical_acceptance": false,
+  "user_stop": "STOP_AFTER_SPARSE_PILOT or unresolvable single-case gate blocker",
+  "launch_limit": 36,
+  "native_timeout_seconds": 180,
+  "count_failures_and_timeouts": true,
+  "historical_contracts_closed": true,
+  "composition_slots": [
+    "pure_Fe",
+    "Si_ZERO",
+    "independent_H2O",
+    "HHe_Y0.275"
+  ],
+  "gas_eos": "existing ChabrierHHe0275; new uniform gas_hhe_prescribed selector",
+  "temperature_scope": "external native T-lnP in gas only; native existing thermal closures in iron/water",
+  "mass_earth": 8.04,
+  "radius_comparison": {
+    "target_earth": 2.39,
+    "interval_earth": [
+      2.28,
+      2.49
+    ],
+    "fixed_mass": true,
+    "posterior": false
+  },
+  "surface": {
+    "pressure_cgs": 100000.0,
+    "temperature_K": 350
+  },
+  "single_fractions": [
+    [
+      0.3,
+      0,
+      0.699,
+      0.001
+    ],
+    [
+      0.1,
+      0,
+      0.8999,
+      0.0001
+    ],
+    [
+      0.9999,
+      0,
+      0,
+      0.0001
+    ],
+    [
+      0.5,
+      0,
+      0.49999,
+      1e-05
+    ]
+  ],
+  "tight_confirmation": "same first composition; ode1e-11/fit1e-7",
+  "tight_radius_relative_difference_max": 1e-05,
+  "grid": {
+    "u_values": [
+      0.1,
+      0.3,
+      0.5,
+      0.7,
+      0.9,
+      1.0
+    ],
+    "gas_fractions": [
+      1e-05,
+      0.0001,
+      0.001,
+      0.003
+    ],
+    "formula": "DeepSeek helper make_grid; Fe=(1-g)u,water=(1-g)(1-u),Si0",
+    "count": 24
+  },
+  "checker_thresholds": {
+    "normalized_fit_residual_max": 1e-06,
+    "native_density_relative_max": 1e-07,
+    "independent_hhe_density_relative_max": 1e-10,
+    "external_T_relative_max": 1e-10,
+    "local_phase_PT_relative_neighborhood": 1e-07
+  },
+  "limitations": [
+    "Numerical call/domain validation, not empirical EOS/phase certification",
+    "Nonfinite density attempts rejected before counter increment; counters include diagnostic reevaluation",
+    "Water runtime expected phases from native dispatch; fixed phase probes independently specified",
+    "Coarse crossings unconfirmed; holes not observational exclusions; no mass-error propagation"
+  ],
+  "predeclared_code_sha256": {
+    "src/EOS.h": "b50e2e8af58bfeb80e6c221ff12dd6488067f73c6af5daf1dd3cdb6d2fd9fc15",
+    "src/EOS.cpp": "d1a790c20946e23ccfd5525c67edc1095056fa93f841f4e9241cf4934c13a643",
+    "src/phase.h": "4e38e9d391e4481ef62d3e70c5475873109a6607487155f95ca18e9e73960df1",
+    "src/phase.cpp": "5b3fb7ea9809f2ec279d263ac4e829761a9f3de5fcddfe2560daa5e9e6aec795",
+    "src/main.cpp": "e8ecbd377cc42ca55efb9239ef87b792eb289347c89eb6dee7d8b5c8c1002b69",
+    "src/tp_settings.cpp": "a8671821cf332fc98be31b21a421a52a921f10b49a2a97bc9a21ced7d6094d36",
+    "src/tp_diagnostics.h": "28a7e568cb7b70f8218ba4e78ac6c09cf174a6da82969b57dfb4d03411431b00",
+    "src/tp_diagnostics.cpp": "935325cb0c8260ae1bd9ab07a419449485bb80b4040639e5eafc19cb774ea5f8",
+    "src/hydro.h": "691c13e8c2b5a3ae727d0b7c9265bb1910f8d9675f891fd3f63ea052a7df14a1",
+    "workflow/pilot_grid.py": "af0e6d3241bf4b770283559ee3df1c79ca05850bd5b6740c77a168f15c78dd43",
+    "workflow/examples/toi732c-pilot.json": "d5628e8d4049070492fdc7f13999a5d5fcbe52564f973c2d94b97414f1af9767",
+    "tests/check_pilot_model.py": "168a9e56453698871653962f31f54d9311ffaea3688469fb86202926c035344e",
+    "tests/check_tp_model.py": "d433f06a9d6ed3d3c39c9ffe9c7b19319790290c4e95584c40ef49de30abc85a",
+    "experiments/pure-fe-pilot-20261106/run_pilot.py": "fa708b0f576de881f27a612ff60d21cf564e5b8ba43be0db378c1e1f52513b5d"
+  },
+  "preflight_review_sha256": "0de85f853449a7fbe975a09b7f34e7212abf5b7d4e53a6e8190fddee904eacaf"
+}

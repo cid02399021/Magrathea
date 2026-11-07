@@ -1,0 +1,18 @@
+{
+  "approved": true,
+  "findings": [
+    {
+      "severity": "nonblocking",
+      "location": "src/EOS.cpp:1119-1140",
+      "description": "Nonfinite density inputs return NaN before incrementing audit counters. Counters therefore omit these rejected attempts. This does not compromise numerical rejection or accepted-state domain checking and is not a blocker for this pilot; counters must not be described as an exhaustive record of invalid calls."
+    }
+  ],
+  "limitations": [
+    "Approval covers only the five changed core API/selector files against baseline 26b7b72532b7586c0afe504daf67a831d764bf4d. CLI integration and diagnostics remain unreviewed.",
+    "Actual candidate source and every validated-source.json hash were checked. check-0.log is empty; check-1.log reports 144 passing checks; check-2.log records compilation and linking with warnings. No builds, tests or planetary solvers were executed during this review.",
+    "Strict checking defaults off. When enabled, bounds use the actual loaded axes, including legacy float conversions, with cgs-to-GPa conversion for density and GPa input for dTdP_S. Out-of-domain table queries are rejected before legacy clamping; tabletype2 gradients are explicitly rejected.",
+    "All 111 exported EOS pointers receive distinct symbol-based IDs. The new selector uniformly returns existing Gas_hhe, and settings validation requires external TP. Existing EOS mathematics and default selectors remain unchanged.",
+    "The water III fixture uses 0.3 GPa and 250 K; the correction changes the test only.",
+    "Bounds checking establishes numerical table-domain validity only. This approval does not certify empirical fits, phase thermodynamics, physical EOS validity or planetary results."
+  ]
+}

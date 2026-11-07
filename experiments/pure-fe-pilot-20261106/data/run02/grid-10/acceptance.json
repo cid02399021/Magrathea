@@ -1,0 +1,20 @@
+{
+  "status": "PASS_CONDITIONAL_NUMERICAL",
+  "radius_earth": 1.8710293883836246,
+  "layer_rows": 11385,
+  "gas_rows": 10041,
+  "phase_counts": {
+    "Fe_hcp": 587,
+    "IceX": 41,
+    "Water_sc_Mazevet": 37,
+    "Water_Brown": 597,
+    "Water_Vap_IAPWS": 82,
+    "Gas_hhe": 10041
+  },
+  "local_phase_boundary_rows": 0,
+  "max_native_density_relative": 6.082541677502081e-16,
+  "max_independent_hhe_density_relative": 5.494866518846986e-16,
+  "max_external_temperature_relative": 2.20129648003316e-16,
+  "rejected_numerical_table_trials": 0,
+  "physical_acceptance": false
+}

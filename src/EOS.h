@@ -2,6 +2,7 @@
 #define EOS_H_
 
 #include "define.h"
+#include <map>
 #include <gsl/gsl_interp.h>
 #include <gsl/gsl_spline.h>
 #include <gsl/gsl_interp2d.h>
@@ -30,6 +31,17 @@ struct EOS
   void modify_extern_density(double (*f)(double P, double T, double rho_guess)){density_extern = f;}
   void modify_extern_entropy(double (*g)(double rho, double T)){entropy_extern = g; thermal_type = 1;}
   void modify_dTdP(double (*h)(double P, double T, double &rho_guess)){dTdP = h; thermal_type = 2;} // If the dTdP is set, it will overwrite the entropy method. Pressure in cgs unit. rho_guess is only used as the initial guess of density solver. Shouldn't be used to calculate temperature gradient. The dTdP should be in the unit of K/microbar.
+
+  // Strict table audit API
+  static void set_strict_table_audit(bool enable);
+  static bool strict_table_audit();
+  static unsigned long long rejected_table_queries();
+  static std::map<std::string, unsigned long long> density_audit_counts();
+  static std::map<std::string, unsigned long long> gradient_audit_counts();
+  void set_audit_id(std::string id){audit_id_ = id;}
+  std::string audit_id() const {return audit_id_.empty() ? ("UNREGISTERED:" + phasetype) : audit_id_;}
+  bool table_domain_contains(double Pcgs, double T) const;
+  int thermal_code() const {return thermal_type;}
   
   double BM3(double rho);	// input rho in g/cm^3, return pressure in GPa, type 0
   double BM4(double rho);	// type 1
@@ -123,6 +135,11 @@ private:
   int thermal_type;		       // Indicates the thermal type of the phase.  0 indicates no temperature profile available, 1 indicates entropy method, 2 indicates the temperature gradient method, 3 indicates ideal gas, 4 indicates the EOS is fitted along the isentrope, 5 indicates no Theta0, 6 indicates has Theta 0 but no electron pressure, 7 indicates has electron pressure as well, type 8, RTpress style, type 9 thermal expansion
   double *rhotable, *Ptable, *temptable, *adiabattable;	// density table in cgs, Ptable in GPa.
   int tabletype=1; //Table 2D or 3D
+  std::string audit_id_;
+  static bool strict_audit_enabled_;
+  static unsigned long long rejected_table_queries_;
+  static std::map<std::string, unsigned long long> density_audit_counts_;
+  static std::map<std::string, unsigned long long> gradient_audit_counts_;
   int bn;				// number of indices of b
   double* b;				// fitted polynomial parameters of the thermal coefficients b(V) in erg/mol.  Convert eV/atom to erg/mol need to multiply eV_erg*n*NA. For example, for MgSiO3, 0.9821 eV/atom = 4.824E12 *0.9821 erg/mol = 4.738E12 erg/mol.
 

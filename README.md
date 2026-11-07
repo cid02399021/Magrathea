@@ -1,12 +1,14 @@
 # Sub-Neptune research + portable AI workflow
 
+2026-11-07：[run分支可运行的纯铁核 / 水 / H-He稀疏测试版](experiments/pure-fe-pilot-20261106/README.md)：真实单例独立验收后扫描24点，16通过、8个TP边界初始试探失败。图、原始结果和运行说明均已归档；完整组成匹配线及联合误差带尚未完成。
+
 把科研工程、实验归档、AI 编程流程放在同一个仓库。可以只试工作流，也可以继续 Sub-Neptune 研究。给AI的启动提示见 [START_HERE.md](START_HERE.md)。
 
 2026-11-06后续：[自己的400点TP已接通真实C++程序](experiments/external-tp-bridge-20261106/README.md)。单位转换、原生插值及真实单例独立复核通过；这组测试设定R≈2.14832RE，仍为简化EOS工程验证。
 
 2026-11-06：主程序首段已完成[单案例mock工程烟测与存档](experiments/main-smoke-20261106/README.md)，24项固定测试和独立完整代码门通过。测试输入、假solver、物理验收false均显式标记；未启动真实solver/grid/拟合。
 
-**当前状态：受限 mode0 TP 接口与第四阶段的一个局部合成恢复已通过独立验收。** 工程夹具中，A的1%气层真值用B恢复为约0.243604%，条件性低估75.64%；原B→A方向的失败仍完整保留。[新恢复报告与证据](experiments/prescribed-tp-reciprocal-20261030/README.md)。累计14次拟合，未重跑原8次、未追加API；不代表真实行星组成或解唯一，第五阶段尚未开始。
+**历史阶段状态：受限 mode0 TP 接口与第四阶段的一个局部合成恢复已通过独立验收。** 工程夹具中，A的1%气层真值用B恢复为约0.243604%，条件性低估75.64%；原B→A方向的失败仍完整保留。[新恢复报告与证据](experiments/prescribed-tp-reciprocal-20261030/README.md)。累计14次拟合，未重跑原8次、未追加API；不代表真实行星组成或解唯一，第五阶段尚未开始。
 
 [从开始到现在的完整工作总报告（2026-10-30）](reports/project-history-20261030/README.md)：现含8组阶段图（2026-11-02补充）、历史实验、新增14次拟合、失败与修复、五阶段进展及详细证据链接。
 

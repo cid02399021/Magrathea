@@ -1,0 +1,8 @@
+{
+  "metadata_only_normalization": true,
+  "generated_source_changed": false,
+  "baseline_sha256": "1cc35dd847e3fc39f025ef4b5d97cef7aae8bdf44d038b2822ad3b3041b7ee4e",
+  "candidate_sha256": "b7c7d41fbd856e351505db346416bc263940c53a92f683c44ecdbb8244c4b4eb",
+  "canonical_patch_sha256": "6dffa4894380b4bd48727d841b89a1ef62f1e753c8228f6d636060b6dafc5370",
+  "git_numstat": "1\t1\tsrc/hydro.cpp"
+}

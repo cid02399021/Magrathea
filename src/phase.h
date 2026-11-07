@@ -67,6 +67,8 @@ EOS* find_phase_water_legacy(double P, double T);
 EOS* find_phase_gas_default(double P, double T);
 EOS* find_phase_HHe_tabulated(double P, double T);
 EOS* find_phase_gas_fixed_mu2(double P, double T);
+EOS* find_phase_gas_hhe_prescribed(double P, double T);
+void configure_prescribed_hhe_audit();
 
 EOS* find_phase(double m, double MC, double MM, double MW, double MG, double P, double T, bool inward = false);
 // given the accumulated mass (in g), P (in cgs) and T, return the corresponding phase.  If inward = true, return the outer component at the mass transition boundary
@@ -80,7 +82,7 @@ struct phase_params
   PhaseDgm* cmpn;
 };
 
-extern PhaseDgm core, core1, mant, mant1, mant2, mant3, mant4, water, water1, water2, atm, atm1, atm_fixed_mu2;
+extern PhaseDgm core, core1, mant, mant1, mant2, mant3, mant4, water, water1, water2, atm, atm1, atm_fixed_mu2, atm_hhe_prescribed;
 // Atmosphere doesn't support self-consistent phase diagram.  Multiple components with each masses specified have to be constructed in order to use multi-phase atmosphere.
 
 #endif	// PHASE_H_

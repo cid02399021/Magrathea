@@ -1,6 +1,7 @@
 #ifndef HYDRO_H_
 #define HYDRO_H_
 
+#include <vector>
 #include "define.h"
 #include "EOS.h"
 #include "phase.h"
@@ -79,6 +80,11 @@ struct hydro			// pressure, density of each species, and maybe temperature again
   int getstatus(){return ode_status;}
   const TPDiagnostics& tp_diagnostics() const { return tp_diagnostics_; }
   const EOS* getphase(int layer) const { return Phaselist.at(layer); }
+  // Return component masses in ME units.
+  vector<double> component_masses() const { return M_Comp; }
+  // Return EOS pointer for a given component slot at specified P (cgs) and T (K).
+  // Non-const because it may use mutable EOS internals to find phase.
+  EOS* component_phase(int slot, double P, double T) { return Comp.at(slot).find_phase(P, T); }
   
 private:
   vector<double> rb, P, M, T, rho; // all the value at grid points.

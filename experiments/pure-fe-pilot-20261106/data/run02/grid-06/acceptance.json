@@ -1,0 +1,16 @@
+{
+  "status": "PASS_CONDITIONAL_NUMERICAL",
+  "radius_earth": 1.3501645232990693,
+  "layer_rows": 9511,
+  "gas_rows": 8857,
+  "phase_counts": {
+    "Fe_hcp": 654,
+    "Gas_hhe": 8857
+  },
+  "local_phase_boundary_rows": 0,
+  "max_native_density_relative": 6.644175456217306e-16,
+  "max_independent_hhe_density_relative": 4.739602926976951e-16,
+  "max_external_temperature_relative": 1.6240977166667626e-16,
+  "rejected_numerical_table_trials": 0,
+  "physical_acceptance": false
+}

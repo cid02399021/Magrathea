@@ -1,0 +1,6 @@
+{
+  "execution_controller_sha256": "fa708b0f576de881f27a612ff60d21cf564e5b8ba43be0db378c1e1f52513b5d",
+  "release_controller_sha256": "762dae9818ad6cd281681859a1f04b95df464be99d14712e9a14e20d087e5d82",
+  "delta_sha256": "b8148f72383495654d42cf48d2de86a0078a8e2012879580cfdf469984182ed1",
+  "scope": "Readonlyverify portability/filefilter/failedartifact checks only; execution defaultstrictguards and allcalculationpaths unchanged; no additionalnativecalls"
+}

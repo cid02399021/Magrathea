@@ -637,6 +637,133 @@ EOS* find_phase_water_tabulated(double P, double T)
 
 // ========== Phase Diagram for Atmosphere  ================
 // ---------------------------------
+EOS* find_phase_gas_hhe_prescribed(double P, double T)
+{
+  if (P <= 0 || T <= 0 || !gsl_finite(P) || !gsl_finite(T))
+  {
+    return NULL;
+  }
+  return Gas_hhe;
+}
+
+void configure_prescribed_hhe_audit()
+{
+  #define REG(x) x->set_audit_id(#x)
+  REG(Fe_liquid);
+  REG(Fe_liquid2);
+  REG(Fe_fcc);
+  REG(Fe_bcc);
+  REG(Fe_hcp);
+  REG(Fe_hcp2);
+  REG(Fe_Seager);
+  REG(Fe_hcp3);
+  REG(Fe_7Si);
+  REG(Fe_15Si);
+  REG(Fe_Dummy);
+  REG(Si_Pv_Shim);
+  REG(Si_Pv);
+  REG(Si_PPv);
+  REG(Si_PPv_Sakai);
+  REG(Si_PREM);
+  REG(Si_BM2fit);
+  REG(Si_Seager);
+  REG(Si_Dummy);
+  REG(Si_liquid);
+  REG(Si_Liquid_Wolf);
+  REG(Fo);
+  REG(Wds);
+  REG(Rwd);
+  REG(Akm);
+  REG(Pv_Doro);
+  REG(PPv_Doro);
+  REG(Fo_Sotin);
+  REG(En);
+  REG(Mw);
+  REG(Ice_Seager);
+  REG(H2O_AQUA);
+  REG(H2O_SeaFreeze);
+  REG(Water_SF);
+  REG(Water_Brown);
+  REG(Water_IAPWS);
+  REG(Water_ExoPlex);
+  REG(Water);
+  REG(Water_sc_Mazevet);
+  REG(IceIh_SF);
+  REG(IceII_SF);
+  REG(IceIII_SF);
+  REG(IceV_SF);
+  REG(IceVI_SF);
+  REG(IceIh);
+  REG(IceIh_ExoPlex);
+  REG(IceVI_ExoPlex);
+  REG(IceVI_Bezacier);
+  REG(IceVII_ExoPlex);
+  REG(IceVII_Bezacier);
+  REG(IceVII);
+  REG(IceVIIp);
+  REG(IceVII_FFH2004);
+  REG(IceVII_FFH2004fit);
+  REG(IceVII_FFH2004BM);
+  REG(IceVII_Fei);
+  REG(IceVII_FFH2004T);
+  REG(IceX_HS);
+  REG(IceX);
+  REG(IceZeng2013FFH);
+  REG(IceZeng2013FMNR);
+  REG(Ice_Dummy);
+  REG(Gas);
+  REG(Gas_iso);
+  REG(Gas_hhe);
+  REG(watervapor);
+  REG(Water_Vap_IAPWS);
+  REG(vdW_H2);
+  REG(vdW_He);
+  REG(vdW_H2O);
+  REG(vdW_H2O_iso);
+  REG(vdW_H2O_lo);
+  REG(vdW_H2O_hi);
+  REG(vdW_CH4);
+  REG(vdW_NH3);
+  REG(vdW_CO2);
+  REG(Gold);
+  REG(Plat);
+  REG(Graph);
+  REG(Diam);
+  REG(BC8);
+  REG(Graph_Lowitzer);
+  REG(SiC_B3_Vinet);
+  REG(SiC_B1_Vinet);
+  REG(Anorthite);
+  REG(Spinel);
+  REG(Fayalite);
+  REG(Fe_Wadsleyite);
+  REG(Fe_Ringwoodite);
+  REG(Enstatite);
+  REG(Ferrosilite);
+  REG(Diopside);
+  REG(Hedenbergite);
+  REG(HP_clinopyroxene);
+  REG(Mg_Akimotoite);
+  REG(Fe_Akimotoite);
+  REG(Pyrope);
+  REG(Mg_Majorite);
+  REG(Almandine);
+  REG(Grossular);
+  REG(Quartz);
+  REG(Coesite);
+  REG(Stishovite);
+  REG(Seifertite);
+  REG(Fe_Post_Perovskite);
+  REG(Fe_Perovskite);
+  REG(HP_Clinoferrosilite);
+  REG(Periclase);
+  REG(Wustite);
+  REG(Kyanite);
+  REG(Nepheline);
+  #undef REG
+  EOS::set_strict_table_audit(true);
+}
+
 // Ideal Gas: Isothermal for P<100 bar, the radiative/convective boundary (Nixon & Madhusudhan 2021). Adiabatic ideal gas for P > 100 bar
 EOS* find_phase_gas_default(double P, double T)
 {
@@ -688,6 +815,7 @@ PhaseDgm water2("water2", find_phase_water_legacy);
 PhaseDgm atm("atm", find_phase_gas_default); //Phase Diagrams for Atmosphere
 PhaseDgm atm1("atm1", find_phase_HHe_tabulated);
 PhaseDgm atm_fixed_mu2("atm_fixed_mu2", find_phase_gas_fixed_mu2);
+PhaseDgm atm_hhe_prescribed("atm_hhe_prescribed", find_phase_gas_hhe_prescribed);
 
 EOS* find_phase(double m, double MC, double MM, double MW, double MG, double P, double T, bool inward)
 // given the accumulated mass (in g), P (in cgs) and T, return the corresponding phase

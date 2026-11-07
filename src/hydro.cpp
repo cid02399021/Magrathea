@@ -1009,7 +1009,7 @@ hydro::hydro(double Pc, double MCin, double MMin, double MWin, double P0, double
       return;
     }
 
-    rhot = Phase -> density(y[1], Tt, -1);
+    rhot = Phase -> density(y[1], y[2], -1);
     params.x[0] = rhot;
     
     rb.push_back(y[0]);

@@ -1,5 +1,74 @@
 #include "EOS.h"
 
+#include <map>
+#include <string>
+
+bool EOS::strict_audit_enabled_ = false;
+unsigned long long EOS::rejected_table_queries_ = 0;
+std::map<std::string, unsigned long long> EOS::density_audit_counts_;
+std::map<std::string, unsigned long long> EOS::gradient_audit_counts_;
+
+void EOS::set_strict_table_audit(bool enable)
+{
+  strict_audit_enabled_ = enable;
+  if (enable)
+  {
+    rejected_table_queries_ = 0;
+    density_audit_counts_.clear();
+    gradient_audit_counts_.clear();
+  }
+}
+
+bool EOS::strict_table_audit()
+{
+  return strict_audit_enabled_;
+}
+
+unsigned long long EOS::rejected_table_queries()
+{
+  return rejected_table_queries_;
+}
+
+std::map<std::string, unsigned long long> EOS::density_audit_counts()
+{
+  return density_audit_counts_;
+}
+
+std::map<std::string, unsigned long long> EOS::gradient_audit_counts()
+{
+  return gradient_audit_counts_;
+}
+
+bool EOS::table_domain_contains(double Pcgs, double T) const
+{
+  if (!gsl_finite(Pcgs) || !gsl_finite(T))
+    return false;
+  if (Pcgs <= 0 || T <= 0)
+    return false;
+  if (Pcgs > 1e16)
+    return false;
+  if (eqntype != 7)
+    return true;
+  double Pgpa = Pcgs / 1e10;
+  if (tabletype == 4)
+  {
+    if (nline <= 0 || tlen <= 0)
+      return false;
+    int np = nline / tlen;
+    if (np <= 0)
+      return false;
+    return Pgpa >= Ptable[0] && Pgpa <= Ptable[np - 1] &&
+           T >= temptable[0] && T <= temptable[tlen - 1];
+  }
+  else if (tabletype == 2)
+  {
+    if (nline <= 0)
+      return false;
+    return Pgpa >= Ptable[0] && Pgpa <= Ptable[nline - 1];
+  }
+  return false;
+}
+
 EOS::EOS():phasetype(""),eqntype(0), V0(numeric_limits<double>::quiet_NaN()), K0(numeric_limits<double>::quiet_NaN()), K0p(numeric_limits<double>::quiet_NaN()), K0pp(numeric_limits<double>::quiet_NaN()), mmol(numeric_limits<double>::quiet_NaN()), P0(0), Theta0(numeric_limits<double>::quiet_NaN()), gamma0(numeric_limits<double>::quiet_NaN()), beta(numeric_limits<double>::quiet_NaN()), gammainf(numeric_limits<double>::quiet_NaN()), gamma0p(numeric_limits<double>::quiet_NaN()), e0(numeric_limits<double>::quiet_NaN()), g(numeric_limits<double>::quiet_NaN()), T0(300), alpha0(numeric_limits<double>::quiet_NaN()), alpha1(0), xi(0), cp_a(numeric_limits<double>::quiet_NaN()), cp_b(0), cp_c(0), at1(numeric_limits<double>::quiet_NaN()), at2(numeric_limits<double>::quiet_NaN()), at3(numeric_limits<double>::quiet_NaN()), at4(numeric_limits<double>::quiet_NaN()), ap1(numeric_limits<double>::quiet_NaN()), ap2(numeric_limits<double>::quiet_NaN()), ap3(numeric_limits<double>::quiet_NaN()), ap4(numeric_limits<double>::quiet_NaN()), n(-1), Z(-1), a_vdW(numeric_limits<double>::quiet_NaN()),b_vdW(numeric_limits<double>::quiet_NaN()),Debye_approx(false), thermal_type(0), rhotable(NULL), Ptable(NULL), temptable(NULL), adiabattable(NULL), bn(0), accP(NULL), accT(NULL), spline(NULL), spline2drho(NULL), spline2dadi(NULL), nline(0), tlen(0)
 {
   shA = shB = shC = shD = shE = std::numeric_limits<double>::quiet_NaN();
@@ -1059,6 +1128,16 @@ double EOS::density(double P, double T, double rho_guess)
   }
 
   int status;
+
+  if (strict_audit_enabled_)
+  {
+    density_audit_counts_[audit_id()]++;
+    if (!table_domain_contains(P, T))
+    {
+      rejected_table_queries_++;
+      return numeric_limits<double>::quiet_NaN();
+    }
+  }
   
   if(P < 0 || P > 1E16)		// unrealistic pressure
     return numeric_limits<double>::quiet_NaN();
@@ -1757,6 +1836,16 @@ double EOS::dTdm(double m, double r, double rho, double P, double T)
 double EOS::dTdP_S(double P, double T, double &rho_guess)
 // partial T partial P along isentrope in K / GPa, given pressure in GPa
 {
+  if (strict_audit_enabled_)
+  {
+    gradient_audit_counts_[audit_id()]++;
+    if (!table_domain_contains(P * 1e10, T) || tabletype == 2)
+    {
+      rejected_table_queries_++;
+      return numeric_limits<double>::quiet_NaN();
+    }
+  }
+
   if (eqntype == 6)		// ideal gas
   {
     if (!gsl_finite(mmol))

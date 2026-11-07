@@ -1,0 +1,7 @@
+{
+  "data/run01": "REAL_NATIVE_SOLVER_EXAMPLE_TP; overall single gate FAILED; originals preserved",
+  "data/run02": "REAL_NATIVE_SOLVER_EXAMPLE_TP_CONDITIONAL; 5single accepted;24grid attempts16accepted8failed",
+  "tests/test_interface_temperature.cpp": "SYNTHETIC_EOS_FIXTURE; no observed-planet fit",
+  "evidence/test_pilot_controller.log": "SIMULATED_UNIT_RESULTS (2.4RE dummy), not planetary results",
+  "physical_acceptance": false
+}

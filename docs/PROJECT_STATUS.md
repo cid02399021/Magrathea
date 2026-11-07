@@ -1,5 +1,13 @@
 # Current project state / 当前状态
 
+## 2026-11-07 当前：run稀疏pilot已停止计算
+
+基线26b7b72；纯Fe/独立H2O/HHe、Si0。4代表+1加严实际单例独立审核通过后，固定24点扫描完成：16PASS、8初始TP上边界试探失败（约1.2e-14相对超界，真实解覆盖未知，不能当物理/观测排除）。通过点中最近样本Fe.2997/water.6993/gas.001，R2.373594761773518RE。只有一个未确认中心半径粗交点；完整匹配线、质量误差传播与后验尚未完成。
+
+真实前向31/36：原尝试2+修复后单例5+网格24。已停止，不花余额追加。DeepSeek本段19，项目85/88。hydro组成界面Tt→y[2]单参数修复有RED/GREEN及独立审核；不改EOS公式、表格或阈值。实际执行控制器原字节保存在冻结源中；发布版只读verify的可移植性修复不改变已算结果或执行保护。
+
+原始失败、有效结果、源码/ELF、图、运行与只读核验入口见 [pilot档案](../experiments/pure-fe-pilot-20261106/README.md)。目标发布yt2523/Magrathea的run，master保持26b7b72。下一步只建议诊断TP边界舍入/初始化；本轮不自动补点、加密、加速或推断完整组成线。下文为历史状态，不能据此重启旧实验。
+
 Stage4 completed within a restricted ideal-mu2 engineering fixture; no observed-planet posterior or realistic-EOS inference.
 
 - Original B1%truth→A30 experiment:8individual fits passed checks, overallFAILED at endpoint nonbracketing. That immutable evidence remains in experiments/prescribed-tp-20261028/.

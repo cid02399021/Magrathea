@@ -1,0 +1,20 @@
+{
+  "approved": true,
+  "blocking_findings": [],
+  "verified_evidence": [
+    "READYFORNEWSINGLEVALIDATIONONLY.",
+    "Actual canonical-temperature.patch byte SHA256 matches repair-identity.json: 6dffa4894380b4bd48727d841b89a1ef62f1e753c8228f6d636060b6dafc5370.",
+    "Actual candidate validated-pilot-source/src/hydro.cpp SHA256 is unchanged: b7c7d41fbd856e351505db346416bc263940c53a92f683c44ecdbb8244c4b4eb.",
+    "Actual baseline source/src/hydro.cpp SHA256 is unchanged: 1cc35dd847e3fc39f025ef4b5d97cef7aae8bdf44d038b2822ad3b3041b7ee4e.",
+    "Prior canonical-repair-review-r1-original.json confirms its sole blocker was patch byte-hash binding; prior checks covered the one-argument repair, all 40 candidate hashes, valid patch, 144 probes, synthetic zero error and main build.",
+    "synthetic-red.log records density relative error 0.00233805 and FAIL; validated-pilot-source/check-3.log records error 0 and INTERFACE_TEMPERATURE_PASS.",
+    "Local snapshots record 2/36 campaign attempts, 85/88 project DeepSeek calls and no grid launched.",
+    "Original rejection reports and failed workflow state remain retained."
+  ],
+  "limits": [
+    "Approval covers readiness for one new single validation only; no empirical physics acceptance or completed planetary validation.",
+    "Prior code, manifest and build checks were inspected as saved evidence, not rerun.",
+    "Budget and campaign counts were verified from local snapshots, not external live records.",
+    "No writes, tests, builds, model runs or API calls were performed."
+  ]
+}

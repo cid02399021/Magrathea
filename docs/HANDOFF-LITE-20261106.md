@@ -2,6 +2,18 @@
 
 更新：2026-11-06。本文件独立可读，不依赖旧聊天。用户自己新建空白窗口；不要创建/分叉聊天，也不要自动读取旧聊天历史。
 
+## 最新现场（2026-11-07，优先于全部旧段落）
+
+本轮纯铁核+独立水+HHe（Si0）稀疏测试已完成并停止计算；基线26b7b72，开发/发布run，master不变。不要读取旧聊天、创建/分叉聊天或重跑历史实验。当前只收尾归档验收/发布。
+
+实际31/36新前向：run01两次（第一通过、第二界面密度不一致失败）；DeepSeek仅修hydro.cpp组成入口密度调用Tt→y[2]，合成RED.00233805→GREEN0，144探针/mainbuild及独立门通过；run02四代表+首例tight全部获独立实际审核，随后24grid=16PASS/8初始TP上边界试探失败。D:/Codex/downloads/toi732c-pure-fe-pilot-20261106-run01与run02原件不覆盖；保真档案experiments/pure-fe-pilot-20261106/data/。不得用剩余5次继续模型。
+
+最近直接点仅指16通过点中：Fe.2997/water.6993/gas.001，R2.373594761773518RE。中心半径只有一个未确认粗交点，完整组成线尚未得到。8失败查询比TP上限1e10cgs高约1.2e-14相对，可能边界舍入/初始化，不能认定真实解必须更深TP，更不能当观测排除。下一新步骤建议先专门诊断此边界，不自动扩大扫描。
+
+DeepSeek85/88，本段19次，来自真实runner usage，无预留；不再调用API。旧14拟合与旧2桥接合同继续关闭。完整代码门、修复和实际单例门证据在档案evidence；最终数据/发布复核另存final-review.json。运行入口run_pilot.py single/grid；只读verify、verify_archive.py及plot_pilot.py不跑模型。发布只读verify修复不改计算路径/执行保护，实际执行控制器原字节冻结在data/run02/frozen-source/run_pilot.py。
+
+固定示范TP/M8.04/目标R2.39/区间[2.28,2.49]；外部TP仅气层，原水铁热结构保留（表格10、Mazevet2、IceX0等）。physical_acceptance=false，未传播质量误差或算后验。单元日志模拟2.4RE不是实际结果；来源标签明确。DeepSeek写计算代码，Codex负责固定验收编排/测试/诊断/分析存档；portable.py未改。
+
 ## 最新状态：外部TP与真实程序已算通（同日后续授权，优先于下文）
 
 用户后来明确授权查相关旧聊天里的代码分析网站，完成TP适配后尝试真实程序，并自行插值取值，只在重大决策/无法继续时询问。本轮已完成，不要重复计算：`workflow/tp_import.py`＋`workflow/tp_query.cpp`经DeepSeek实现、11项固定测试和独立代码门通过。400点原温度均保留，只做Pa→bar；现有TPProfile负责T-lnP，未重写EOS/TP算法。

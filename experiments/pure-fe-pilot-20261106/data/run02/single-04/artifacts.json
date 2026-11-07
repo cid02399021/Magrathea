@@ -1,0 +1,9 @@
+{
+  "case.json": "b3c28a19e6d1b332da07ee436b27336c5c4f29cf6666da4ea9e5da0f72c13051",
+  "run.cfg": "63dee0b8dadde4979779dd4dab069479700fb1c6ab5a30bea835ace749ccc9ea",
+  "stdout.log": "fd975a73cebc1b975f14362580224f87d3099b50d40e30bfa4d52c9842eddadb",
+  "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "model.dat": "39dfa355d05b0c0ec1ba64d406060c922967f0c04eeeaafcfe35a6306c6e9d6b",
+  "model.dat.tp.json": "e5e83cb7425721700a6925f6619870751d363ce078b6502784d7d5f712772daf",
+  "acceptance.json": "7e1939b0e8216fffc01a0978d8bb4c829adeb8b13f7c186ea21acda735a66bfc"
+}

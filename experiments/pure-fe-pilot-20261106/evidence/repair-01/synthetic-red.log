@@ -1,0 +1,2 @@
+SYNTHETIC_FIXTURE interface rows=1 max_density_relative=0.00233805
+FAIL stored material-interface density uses stale temperature

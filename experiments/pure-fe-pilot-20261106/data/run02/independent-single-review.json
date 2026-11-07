@@ -1,0 +1,86 @@
+{
+  "approved_for_sparse_pilot": true,
+  "blocking_findings": [],
+  "verified_results": [
+    {
+      "check": "Independent saved-data acceptance",
+      "method": "Imported frozen-source/tests/check_pilot_model.py with python -B and called verify(diag, casejson, frozen profile, frozen HHe table) for all five cases.",
+      "statuses": [
+        "PASS_CONDITIONAL_NUMERICAL",
+        "PASS_CONDITIONAL_NUMERICAL",
+        "PASS_CONDITIONAL_NUMERICAL",
+        "PASS_CONDITIONAL_NUMERICAL",
+        "PASS_CONDITIONAL_NUMERICAL"
+      ],
+      "radii_earth": [
+        2.373309165701414,
+        2.4163706655941253,
+        1.3769308140166343,
+        2.0114894697655594,
+        2.373309192893356
+      ],
+      "matches_saved_acceptances": true
+    },
+    {
+      "check": "Byte identity",
+      "frozen_files_verified": 46,
+      "per_case_artifacts_verified": 35,
+      "hash_mismatches": 0,
+      "controller_and_working_config_hashes_match": true,
+      "current_case_ledger_hash_records_match": true
+    },
+    {
+      "check": "Accepted profiles",
+      "accepted_rows_checked": 56434,
+      "gas_rows_checked": 50880,
+      "details": "Center and surface anchors, fixed 8.04 Earth masses, component mass slots, actual/native expected phase identities, positive finite states and numerical domains pass. Zero-mass Si slots are empty; no Si or unregistered density/gradient queries occur. No accepted row requires the local 1e-7 phase-boundary allowance.",
+      "maximum_native_density_relative_error": 7.594217998377886e-16,
+      "maximum_independent_hhe_density_relative_error": 5.538952988302328e-16,
+      "maximum_external_tp_relative_error": 2.1938090576276084e-16,
+      "gas_gradient_queries": 0,
+      "rejected_table_queries": 0,
+      "accepted_edge_clamps": 0
+    },
+    {
+      "check": "Raw fit and convergence",
+      "maximum_absolute_raw_normalized_fit_residual_by_case": [
+        1.3636587493818874e-7,
+        4.633584908998666e-8,
+        9.054937895920984e-8,
+        9.08303223911536e-8,
+        1.2488585169836782e-8
+      ],
+      "all_ode_status_zero_and_uncorrected": true,
+      "tight_ode_tolerance": 1e-11,
+      "tight_fit_tolerance": 1e-7,
+      "baseline_tight_relative_radius_difference": 1.1457395616362076e-8,
+      "radius_difference_limit": 1e-5,
+      "details": "Raw residuals were recomputed. All sampled model.dat states and phase names match full-precision sidecars within eight-significant-digit output rounding, accounting for the native writer's previous-transition-row indexing."
+    },
+    {
+      "check": "Thermal closures and ranges",
+      "details": "Recomputed every per-case phase count and P/T range; all match the summary. Independently checked accepted tabulated-phase bounds. Source confirms table thermal code 10, Fe_hcp 6, Mazevet main hook 2, IceX 0, IceVII_Fei 6 and Bezacier 9. Fe_default/water_default/gas_hhe_prescribed flags are preserved. Native gas RHS density and diagnostic density use the same prescribed T(P); independent HHe interpolation reproduces historical float-loaded axes."
+    },
+    {
+      "check": "Approval scope and budget",
+      "scope": "Only the existing 24-point conditional catalogue, with fractions [(1-g)*u, 0, (1-g)*(1-u), g].",
+      "u": [0.1, 0.3, 0.5, 0.7, 0.9, 1.0],
+      "g": [1e-5, 1e-4, 1e-3, 0.003],
+      "recorded_attempts": 7,
+      "recorded_grid_calls": 0,
+      "remaining_attempts": 29,
+      "attempts_after_24_additional_launches": 31,
+      "campaign_limit": 36,
+      "comparison": "Radius only: target 2.39 Earth radii, interval [2.28, 2.49].",
+      "restrictions": "No acceleration, refinement or posterior work. Unsupported cases remain catalogue holes, not observational exclusions."
+    }
+  ],
+  "limitations": [
+    "Approval is conditional numerical readiness under the example atmospheric T(P). Physical acceptance remains false; no empirical EOS validity, phase stability proof or production posterior is established.",
+    "Iron/water density consistency uses saved native reevaluations; their EOS formulas were not independently reimplemented. HHe density was independently interpolated.",
+    "The tight repeat tests one composition and radius convergence; it does not establish convergence or support throughout the catalogue.",
+    "The local snapshot records the historical 0.004011031380637084 density failure. Original failed-run artifacts and the reported synthetic regression/codegate evidence are absent from this audit bundle, so their preservation, old/new regression values and repair-only historical diff were not independently reverified.",
+    "Hashes establish consistency with supplied manifests, not independent source-to-binary build attestation. Campaign accounting is verified against the supplied snapshot.",
+    "This audit performed no builds, solver runs, fit reruns, file edits, grid launches or API calls."
+  ]
+}
