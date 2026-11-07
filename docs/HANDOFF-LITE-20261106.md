@@ -2,6 +2,12 @@
 
 更新：2026-11-06。本文件独立可读，不依赖旧聊天。用户自己新建空白窗口；不要创建/分叉聊天，也不要自动读取旧聊天历史。
 
+## 2026-11-07 六项核查与Zotero正式交付接收
+
+已只读核查用户六问并接收Zotero V7QBAMEP(version2667)和8份文本/CSV/模板；对方未生成TP节点/脚本，TP生成仍UNASSIGNED。资料在D:/Codex/downloads/toi732c-handoff-review-20261107，原件不上传Git。本轮0新solver/DeepSeek，旧pilot保持停止。详见docs/workflow/SCIENCE_REVIEW_20261107.md与ZOTERO_STORAGE_RULES.md。
+
+新发现未修：TP步进结点舍入与中间RHS严格TP域检查可能不一致（不能确认8例全由此造成）；hydro部分路径先解引用Phase再判空，需受控失败回归。对方旧mu2/study接口和lnT-lnP插值说明与现有CSV/HHe Y.275及T-lnP不一致，后续不得静默替换。用户要求同时考虑M/R误差的面积，当前24点仍固定M，只是初步工程测试；下一步建议先小回归/防护，再另立有界M维度任务，不能自动花旧余额。规则按用户PDF和实际collection核对，已同步同项目LR profile索引，保护历史items。
+
 ## 最新现场（2026-11-07，优先于全部旧段落）
 
 本轮纯铁核+独立水+HHe（Si0）稀疏测试已完成并停止计算；基线26b7b72，开发/发布run，master不变。不要读取旧聊天、创建/分叉聊天或重跑历史实验。当前只收尾归档验收/发布。
