@@ -1,0 +1,3 @@
+[submodule "external/picaso"]
+	path = external/picaso
+	url = https://github.com/natashabatalha/picaso.git
