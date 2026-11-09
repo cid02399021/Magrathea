@@ -1,6 +1,0 @@
-{
-  "interface_temperature": [
-    "workflow/interface_temperature.patch is not a valid standard unified diff: its hunk declares 7 old/new lines but contains 6 each. git apply --numstat rejects it: corrupt patch at line 11. Correct the hunk metadata without changing the repair.",
-    "Applied-source inspection confirms exactly the requested Tt \u2192 y[2] argument change and matching manifest hashes. Recorded evidence shows 144 probes passing, synthetic interface coverage with zero density error, and successful main build. Approval remains blocked by patch formatting; these checks establish no physical validation claim."
-  ]
-}

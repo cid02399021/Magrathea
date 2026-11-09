@@ -1,31 +1,7 @@
-#ignore compiled code
 *.o
 planet
-#ignore specific versions
-main_test.cpp
-#ignore emacs edit file
-*~
-#ignore input output file
-*.txt
-#ignore makefile
-Makefile
-#ignore outdated files
-*old*
-
-tests/.build/
-
-# Portable workflow: local state and credentials
-.runs/
-workflow.local.json
-*.local.json
-.env
-.env.*
-!.env.example
-*.key
-*.pem
-*credentials*.json
-*secrets*.json
+*.d
+result/*
+!result/.gitkeep
 __pycache__/
 *.pyc
-workflow/**/runs/
-workflow/**/logs/

@@ -1,7 +1,0 @@
-!*.txt
-!**/*.txt
-__pycache__/
-.build/
-.mplconfig/
-*.o
-planet-diagnostic

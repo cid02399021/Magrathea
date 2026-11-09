@@ -1,3 +1,0 @@
-* -text -whitespace
-data/**/model.dat.tp.json -diff
-data/**/planet -diff

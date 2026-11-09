@@ -1,6 +1,0 @@
-sphinx>=7.0
-myst-parser
-breathe
-exhale
-sphinx-rtd-theme
-linkify-it-py

@@ -1,5 +1,0 @@
-__pycache__/
-*.pyc
-*.events.jsonl
-clean-build.log
-independent-review-input.md

@@ -1,7 +1,0 @@
-{
-  "repeat_bytewise_identical": true,
-  "tight_relative_radius_change": 1.0095261926412746e-07,
-  "tight_criterion": 2e-06,
-  "mode": 0,
-  "solver_source_changes": false
-}

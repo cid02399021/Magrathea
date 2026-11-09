@@ -1,9 +1,0 @@
-{
-  "origin": "REPRODUCTION_OF_FROZEN_PREBUILDER_SNAPSHOT",
-  "original_red_was_observed_before_builder": true,
-  "original_red_reason": "ModuleNotFoundError: No module named single_case",
-  "reproduction_exit_code": 1,
-  "baseline_state": "coder_parse_error before any implementation proposal applied",
-  "baseline_state_sha256": "d3c53234a7a544770e941073417012929e69bce67189d17c028470833c4bb64e",
-  "note": "This log was freshly reproduced for archival. It is not represented as a contemporaneous raw pre-builder log."
-}

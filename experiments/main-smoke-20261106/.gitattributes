@@ -1,2 +1,0 @@
-# Preserve exact reviewed input/output/source bytes, overriding parent text rules.
-* -text -whitespace

@@ -1,69 +1,30 @@
-# Sub-Neptune research + portable AI workflow
+# TOI732c 纯铁核/分离水/氢氦 Y.275 模型用户手册
 
-2026-11-07：[run分支可运行的纯铁核 / 水 / H-He稀疏测试版](experiments/pure-fe-pilot-20261106/README.md)：真实单例独立验收后扫描24点，16通过、8个TP边界初始试探失败。图、原始结果和运行说明均已归档；完整组成匹配线及联合误差带尚未完成。
+本发布版提供纯铁核+分离水层+氢氦气体层（Y=0.275）的示例配置，其中硅酸盐地幔质量为零；底层求解器和EOS表保持原样。气体层温度由外部温度-压力（TP）表给定；气体密度由独立的H/He EOS表计算。
 
-把科研工程、实验归档、AI 编程流程放在同一个仓库。可以只试工作流，也可以继续 Sub-Neptune 研究。给AI的启动提示见 [START_HERE.md](START_HERE.md)。
+程序使用原生 T-lnP 线性插值处理 TP 剖面，铁核与水层沿用已有热力学闭合方案；水层不一定为固态或液态。示例输入 `input/example_tp.csv` 为工程计算用 TP 剖面，并非观测或已批准的大气温度压力剖面，其物理合理性未经认证；旧稀疏测试中8次初始TP上限试探失败的原因尚待回归确认；本版未修复该边界处理问题，也未修复部分分支的无相指针防护问题，且不提供网格或后验概率。
 
-2026-11-06后续：[自己的400点TP已接通真实C++程序](experiments/external-tp-bridge-20261106/README.md)。单位转换、原生插值及真实单例独立复核通过；这组测试设定R≈2.14832RE，仍为简化EOS工程验证。
-
-2026-11-06：主程序首段已完成[单案例mock工程烟测与存档](experiments/main-smoke-20261106/README.md)，24项固定测试和独立完整代码门通过。测试输入、假solver、物理验收false均显式标记；未启动真实solver/grid/拟合。
-
-**历史阶段状态：受限 mode0 TP 接口与第四阶段的一个局部合成恢复已通过独立验收。** 工程夹具中，A的1%气层真值用B恢复为约0.243604%，条件性低估75.64%；原B→A方向的失败仍完整保留。[新恢复报告与证据](experiments/prescribed-tp-reciprocal-20261030/README.md)。累计14次拟合，未重跑原8次、未追加API；不代表真实行星组成或解唯一，第五阶段尚未开始。
-
-[从开始到现在的完整工作总报告（2026-10-30）](reports/project-history-20261030/README.md)：现含8组阶段图（2026-11-02补充）、历史实验、新增14次拟合、失败与修复、五阶段进展及详细证据链接。
-
-## 先试不花 API 的工作流
-
-需要 Python 3.10+；基础工作流只使用标准库，不必安装项目全部科学依赖。以下命令在仓库根目录执行：
-
-```sh
-python -B workflow/portable.py doctor --config workflow/examples/demo.json
-python -B -m unittest discover -s workflow/tests -v
-python -B workflow/portable.py run --config workflow/examples/demo.json --offline
-python -B workflow/portable.py status --config workflow/examples/demo.json
-# 再运行一次会恢复已有状态、跳过已通过节点
-python -B workflow/portable.py run --config workflow/examples/demo.json --offline
+## 构建步骤
+在 Linux/Ubuntu WSL 环境下，确保已安装 g++、make 和 GSL（GNU Scientific Library），以下命令均在仓库根目录执行：
+```
+make -j2
 ```
 
-离线示例使用标记为 `OFFLINE_FIXTURE_NOT_LLM` 的实现/审核夹具，但实际执行本地断言。通过不代表真实模型调用或行星物理通过。结果保存在配置的 run_dir 中，不上传 Git。
-
-## 用自己的 API 文件
-
-先读 [配置与密钥](docs/workflow/SETUP.md)，复制根目录 `workflow.local.example.json` 为 `workflow.local.json`，给该配置指定新的 run_dir。密钥文件放仓库外，不发到聊天、不提交 Git：
-
-```json
-{"DEEPSEEK_API_KEY":"replace-locally","OPENAI_API_KEY":"optional-for-api-review-only"}
+## 运行示例
+创建结果目录并运行示例：
 ```
-
-```sh
-python -B workflow/portable.py run --config workflow.local.json --credentials /absolute/path/keys.json --allow-tests
+mkdir -p result
+./planet run/toi732c_example.cfg
 ```
+运行不需要 Python、DeepSeek/API、任何 AI 工作流或历史实验。程序输出 result/toi732c_example.dat 和 result/toi732c_example.dat.tp.json（全精度诊断）。
 
-Windows 用 `D:/secrets/keys.json` 等实际路径。默认实现者为 DeepSeek；默认独立审核用已登录的 Codex CLI，不需要 OpenAI API key。无 Codex 的同学可配置独立审核 API 与模型，需自行提供相应 key。仅 API 文件不足以安装 Python/Git/Codex 或构建科学求解器；doctor 会检查可见依赖，实际服务权限由使用者账户决定。不会自动登录、安装或启动行星实验。
+## 输出与路径
+- 为避免覆盖已有结果，每次新运行前请修改配置文件中的 `output_file` 路径，因为程序会直接覆盖同路径的现有文件。
+- 配置文件中的 `tp_profile_file` 相对路径相对于配置文件所在目录（`run/`）解析；`output_file` 相对路径相对于进程工作目录（仓库根目录）解析。
 
-**执行测试使用预先声明的命令白名单，但不是 OS 安全沙箱。** 首次运行别人的任务前须审阅 tests 命令；可信机器或受限容器内运行。代码改在 run_dir/source 副本中，验收后再查看差异移回工程。
+## 配置文件说明
+用户按层地球质量（单位 M⊕）编辑参数，不采用质量分数。示例参数：总质量 8.04 M⊕，铁核占约 30%，水层约 69.9%，气体层约 0.1%。`R` 不强制设为观测值。
 
-## 从这里继续科研
+预期测试半径约为 2.37330917 R⊕，仅为工程验证值。TP 剖面仅覆盖有限范围，程序不做外推，也不能将示例值当作科学默认值。
 
-- [项目状态与最小下一步](docs/PROJECT_STATUS.md)
-- [TP 接口验收表](docs/TP_ACCEPTANCE.md)
-- [已完成实验索引](experiments/subneptune-20261027/README.md)
-- [原始交接与科学限制](experiments/subneptune-20261027/HANDOFF.md)
-- [Linux/WSL 构建与批跑](docs/SCIENCE_REPRODUCTION.md)
-
-根目录 `src/`、`tabulated/`、`Makefile` 是 MAGRATHEA 工程；[原项目说明](docs/MAGRATHEA_UPSTREAM_README.md)保留作者、文献与构建信息。历史文件中的 `D:/...` 是原机器路径，保留原字节供追溯；新的工作流配置使用相对路径，不要求同学复制原目录结构。
-
-## 工作流如何运作
-
-任务计划 → 按依赖/优先级选节点 → DeepSeek 编码 → 固定测试 → 独立 Codex/API 审核 → 保存证据 → 继续下一节点。预算或错误中断后从状态恢复。规划依赖已写好的计划；程序不会自行决定新的科学假设或无限扩展研究。
-
-[AGENTS.md](AGENTS.md)定义权限与角色；[短规则](docs/workflow/SHORT_RULES.md)防止复发；[基础设施验收标准](docs/workflow/ACCEPTANCE.md)定义工程合格线；[架构](docs/workflow/ARCHITECTURE.md)解释目录和调用。已有 Windows/Cline 版本在 [workflow/legacy](workflow/legacy/README.md)，作为历史参考；新的入口不依赖作者本机 Cline 配置。
-
-## 分享与引用
-
-基于 [Huang-CL/Magrathea](https://github.com/Huang-CL/Magrathea) 与 [yt2523/Magrathea](https://github.com/yt2523/Magrathea)，保留 MIT 许可和原作者署名。研究快照来自 `archive/subneptune-20261027` 的 `0aa6316`。工作流架构参考见 [来源与边界](docs/workflow/PROVENANCE.md)。这是个人研究工具，不是上游 MAGRATHEA 官方工作流。
-
-English: This repository combines the MAGRATHEA project, immutable synthetic experiment archives, and a portable bounded coding/test/independent-review loop. Start with the zero-key offline demo. Live use requires your own external credential file and configured reviewer. Full TP-profile input is not yet implemented; historical numeric checks do not validate the new interface.
-
-
-发现问题可在本仓库 GitHub Issues 上报，使用内置模板；智能体先整理脱敏复现，经使用者授权后提交。
+完整出处和开发分支见 https://github.com/yt2523/Magrathea/tree/run ，源代码科学发布提交为 e65b569。2026-11-09：本精简目录已从源码构建，并直接手动完成1次上述示例计算。退出码0，计算半径为 2.373309165701 R⊕；仓库外的独立检查器复核了全部12736条保存状态。此为单例工程运行验收，不代表全部组成、物相或EOS物理适用性已获认证。

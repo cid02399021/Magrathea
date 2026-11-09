@@ -1,9 +1,0 @@
-{
-  "case.json": "0458c6d2a8aafbda2b298cf65444c24d4621b07c7db8a5eaa85556ba846f754b",
-  "run.cfg": "0ed864449378961d823bae109d9abb1bc97b64ffe43e64b169914ecb4ff6d541",
-  "stdout.log": "caa25b55d71edd960b592111d8069c27ade97f25727afb6d96b5ddbe50e6a079",
-  "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-  "model.dat": "d2b79ff1c4f66feb439296e963cdf9894569b3b2cb9171a88f89e3176a485a7d",
-  "model.dat.tp.json": "fdba361c7d9a2e3ced0204d888c849181f6e638a009cccdb56c4ca57a2caaee5",
-  "acceptance.json": "9997d3f2e7a57cfd8f84b5c1dae44fb88cec68a0567ae22f9587b20b3d2205af"
-}

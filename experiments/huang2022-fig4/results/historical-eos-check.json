@@ -1,9 +1,0 @@
-{
-  "historical_ref": "1487d26",
-  "current_scientific_baseline": "4c560f36d2734f6b63ae5118d4074e0c255b59f0",
-  "arrays_equal_ignoring_whitespace": {
-    "Fe_hcp_array": true,
-    "Si_Pv_array": true,
-    "Si_PPv_Sakai_array": true
-  }
-}

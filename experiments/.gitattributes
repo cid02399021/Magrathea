@@ -1,5 +1,0 @@
-# Historical archives and solver profiles retain their original bytes/line endings.
-* text=auto eol=lf
-archive/** -text -whitespace
-huang2022-fig4/*/profiles/** -text -whitespace
-huang2022-fig4/*/logs/** -text -whitespace
