@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-12",
+  "decision": "PHYSICAL_MATCHING_UNCERTAIN_DISCUSS_BEFORE_IMPLEMENTATION",
+  "native_launches": 0,
+  "deepseek_calls": 0,
+  "production_base": "f7bb58c2399866fca3be723a057d5d8ea213bffc",
+  "checked_research_base": "fb62774e64bebf87f243c28b14f38c23855ac8a4",
+  "P_end_bar": 10000.0,
+  "T_end_K": 1258.359116298232,
+  "TP_left_nabla": 0.23830726173199773,
+  "local_EOS_nabla_ad": 0.3998452381081172,
+  "local_EOS_dTdP_K_per_GPa": 503.1489004817865,
+  "local_EOS_rho_g_per_cm3": 0.12202316523805336,
+  "interpolation": "existing bilinear, float32 axis loading reproduced; read-only calculation",
+  "upstream_table_line_ending_normalized_match": true,
+  "table_sha256": "6ccb48b3070fd0045a4dffd410d96bdf228df356d13a12537ad38f1613ee6fcb",
+  "raw_author_EOS_validation_complete": false,
+  "upstream_issues_checked": 8,
+  "upstream_PR_records": 34,
+  "exact_external_TP_endpoint_issue_found": false,
+  "source_reference_index": "K3F4N6Q9",
+  "synthesis_note": "86NGGPHP",
+  "local_evidence_directory": "D:\\Codex\\downloads\\toi732c-adiabat-literature-20261112",
+  "limitations": [
+    "example TP origin unknown",
+    "no convective matching point established",
+    "no radiative flux/opacity validation",
+    "not a final planet solution or new grid"
+  ]
+}
