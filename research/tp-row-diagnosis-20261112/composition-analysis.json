@@ -1,0 +1,178 @@
+[
+  {
+    "case": "grid-17",
+    "fractions_percent": [
+      89.91,
+      0,
+      9.989999999999997,
+      0.1
+    ],
+    "mass_earth": [
+      7.228763999999999,
+      0.0,
+      0.8031959999999997,
+      0.008039999999999999
+    ],
+    "initial_R_guess_earth": 2.0063871528693333,
+    "initial_R_lo_earth": 1.605109722295467,
+    "initial_R_hi_earth": 2.4076645834432,
+    "gas_density_initial_guess_g_cm3": 0.013712356193876885,
+    "hydrostatic_gas_base_pressure_LOWER_BOUND_at_Rlo_bar": 11136.06868256907,
+    "hydrostatic_gas_base_pressure_LOWER_BOUND_at_Rhi_bar": 2199.7975175445094,
+    "bound_assumptions": "spherical positive-density hydrostatic gas; m>=Mtotal-Mgas, r<=Rsurface; trial radius only, not physical final model"
+  },
+  {
+    "case": "grid-18",
+    "fractions_percent": [
+      99.9,
+      0,
+      0.0,
+      0.1
+    ],
+    "mass_earth": [
+      8.03196,
+      0.0,
+      0.0,
+      0.008039999999999999
+    ],
+    "initial_R_guess_earth": 1.833560649590497,
+    "initial_R_lo_earth": 1.4668485196723977,
+    "initial_R_hi_earth": 2.2002727795085963,
+    "gas_density_initial_guess_g_cm3": 0.013712356193876885,
+    "hydrostatic_gas_base_pressure_LOWER_BOUND_at_Rlo_bar": 15966.456959967833,
+    "hydrostatic_gas_base_pressure_LOWER_BOUND_at_Rhi_bar": 3153.948288388709,
+    "bound_assumptions": "spherical positive-density hydrostatic gas; m>=Mtotal-Mgas, r<=Rsurface; trial radius only, not physical final model"
+  },
+  {
+    "case": "grid-19",
+    "fractions_percent": [
+      9.97,
+      0,
+      89.73,
+      0.3
+    ],
+    "mass_earth": [
+      0.801588,
+      0.0,
+      7.2142919999999995,
+      0.02412
+    ],
+    "initial_R_guess_earth": 2.9576693041192144,
+    "initial_R_lo_earth": 2.366135443295372,
+    "initial_R_hi_earth": 3.5492031649430573,
+    "gas_density_initial_guess_g_cm3": 0.023018446811707678,
+    "hydrostatic_gas_base_pressure_LOWER_BOUND_at_Rlo_bar": 7060.664466467126,
+    "hydrostatic_gas_base_pressure_LOWER_BOUND_at_Rhi_bar": 1394.7794007836303,
+    "bound_assumptions": "spherical positive-density hydrostatic gas; m>=Mtotal-Mgas, r<=Rsurface; trial radius only, not physical final model"
+  },
+  {
+    "case": "grid-20",
+    "fractions_percent": [
+      29.909999999999997,
+      0,
+      69.78999999999999,
+      0.3
+    ],
+    "mass_earth": [
+      2.4047639999999997,
+      0.0,
+      5.611115999999999,
+      0.02412
+    ],
+    "initial_R_guess_earth": 2.804400282241267,
+    "initial_R_lo_earth": 2.243520225793014,
+    "initial_R_hi_earth": 3.3652803386895203,
+    "gas_density_initial_guess_g_cm3": 0.023018446811707678,
+    "hydrostatic_gas_base_pressure_LOWER_BOUND_at_Rlo_bar": 8735.40091880709,
+    "hydrostatic_gas_base_pressure_LOWER_BOUND_at_Rhi_bar": 1725.5915395174518,
+    "bound_assumptions": "spherical positive-density hydrostatic gas; m>=Mtotal-Mgas, r<=Rsurface; trial radius only, not physical final model"
+  },
+  {
+    "case": "grid-21",
+    "fractions_percent": [
+      49.85,
+      0,
+      49.85,
+      0.3
+    ],
+    "mass_earth": [
+      4.00794,
+      0.0,
+      4.00794,
+      0.02412
+    ],
+    "initial_R_guess_earth": 2.6322507869421545,
+    "initial_R_lo_earth": 2.105800629553724,
+    "initial_R_hi_earth": 3.1587009443305853,
+    "gas_density_initial_guess_g_cm3": 0.023018446811707678,
+    "hydrostatic_gas_base_pressure_LOWER_BOUND_at_Rlo_bar": 11254.66781086785,
+    "hydrostatic_gas_base_pressure_LOWER_BOUND_at_Rhi_bar": 2223.2245058504413,
+    "bound_assumptions": "spherical positive-density hydrostatic gas; m>=Mtotal-Mgas, r<=Rsurface; trial radius only, not physical final model"
+  },
+  {
+    "case": "grid-22",
+    "fractions_percent": [
+      69.78999999999999,
+      0,
+      29.910000000000004,
+      0.3
+    ],
+    "mass_earth": [
+      5.611115999999999,
+      0.0,
+      2.404764,
+      0.02412
+    ],
+    "initial_R_guess_earth": 2.4340475373900956,
+    "initial_R_lo_earth": 1.9472380299120766,
+    "initial_R_hi_earth": 2.9208570448681144,
+    "gas_density_initial_guess_g_cm3": 0.023018446811707678,
+    "hydrostatic_gas_base_pressure_LOWER_BOUND_at_Rlo_bar": 15393.042805322808,
+    "hydrostatic_gas_base_pressure_LOWER_BOUND_at_Rhi_bar": 3040.68129487858,
+    "bound_assumptions": "spherical positive-density hydrostatic gas; m>=Mtotal-Mgas, r<=Rsurface; trial radius only, not physical final model"
+  },
+  {
+    "case": "grid-23",
+    "fractions_percent": [
+      89.73,
+      0,
+      9.969999999999999,
+      0.3
+    ],
+    "mass_earth": [
+      7.2142919999999995,
+      0.0,
+      0.8015879999999997,
+      0.02412
+    ],
+    "initial_R_guess_earth": 2.1969145745747114,
+    "initial_R_lo_earth": 1.7575316596597692,
+    "initial_R_hi_earth": 2.6362974894896536,
+    "gas_density_initial_guess_g_cm3": 0.023018446811707678,
+    "hydrostatic_gas_base_pressure_LOWER_BOUND_at_Rlo_bar": 23194.609825132386,
+    "hydrostatic_gas_base_pressure_LOWER_BOUND_at_Rhi_bar": 4581.731570396521,
+    "bound_assumptions": "spherical positive-density hydrostatic gas; m>=Mtotal-Mgas, r<=Rsurface; trial radius only, not physical final model"
+  },
+  {
+    "case": "grid-24",
+    "fractions_percent": [
+      99.7,
+      0,
+      0.0,
+      0.3
+    ],
+    "mass_earth": [
+      8.01588,
+      0.0,
+      0.0,
+      0.02412
+    ],
+    "initial_R_guess_earth": 2.0562789783073994,
+    "initial_R_lo_earth": 1.6450231826459194,
+    "initial_R_hi_earth": 2.467534773968879,
+    "gas_density_initial_guess_g_cm3": 0.023018446811707678,
+    "hydrostatic_gas_base_pressure_LOWER_BOUND_at_Rlo_bar": 30221.163006985316,
+    "hydrostatic_gas_base_pressure_LOWER_BOUND_at_Rhi_bar": 5969.692692737843,
+    "bound_assumptions": "spherical positive-density hydrostatic gas; m>=Mtotal-Mgas, r<=Rsurface; trial radius only, not physical final model"
+  }
+]

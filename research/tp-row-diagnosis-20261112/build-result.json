@@ -1,0 +1,5 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 17.883033275604248,
+  "command": "make -j2 (existing O3 flags, logging only)"
+}

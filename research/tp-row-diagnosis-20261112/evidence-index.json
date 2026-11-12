@@ -1,0 +1,31 @@
+{
+  "base": "f7bb58c2399866fca3be723a057d5d8ea213bffc",
+  "research_only": true,
+  "production_source_and_tables_unchanged": true,
+  "diagnostic_code_origin": "DeepSeek; no repair code",
+  "new_deepseek_calls": 1,
+  "project_deepseek_total": 87,
+  "native_launches": 2,
+  "actual_model_trials": 1,
+  "files_sha256": {
+    "REPORT.md": "3d78a9a5f99d532d49ee6d9e3424872b64b8dc57aa4ccae1ab479647bb931ff8",
+    "findings.json": "b3da3a0bcbce78332211e70a8e5ca6a8bfa71f184fc758b1589b25f38e601824",
+    "composition-analysis.json": "1e7511e0e700daf136687e316119954881a37449f4626d58b1eb375fbc8bbf61",
+    "domain-analysis.json": "644a78c4868fc332f780e4e9bbf8a426b0452486ac4870b5c7f8fe2997c00e9f",
+    "nearby-successes.json": "338bd683d09320e90aef64e38540e0efea729662829a853fe26bb90a31add86a",
+    "contract.json": "6da6d10cd1cf5e975104b67a3a04c41328d0b282b0612644f803aeae5ec995d0",
+    "diagnostic-only.patch": "6b23c40c6eaff2d309d8593bd5cfb731b183d360d455d13c1a64058350f2dbd6",
+    "instrumentation-adjudication.json": "905e00740cfc95ab85ed7bb3127c82bd52dc0ead66d2e56dc443f9b39519c489",
+    "launch-adjudication.json": "f3a89d116a0de633fdb508c613698f6efcc523f3a608ea8b322b57714031e1a3",
+    "build-result.json": "03982ec3ceee6261630e6f713bddd5b3eb95eb2bdd03e5a5ffd46a630d7cc4b6",
+    "grid-20/stdout.log": "1e758328ee62bf42426e10956adf92e26bd406d97f6402fa2e8bafd83eb28275",
+    "grid-20/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "grid-20-trace/stdout.log": "338a0d9030ec689dbc5572eaaf560dd70fdae1f9d53e3ec30808539a95e636f8",
+    "grid-20-trace/stderr.log": "2d3ebda087aa6dac87bbeb85e718cb9b2e78671d5086ac0c9ac38030bcc0d1d4",
+    "final-independent-review.json": "d3925604d2439d3e04fe3ae03389f053dd394b1b696f4e1f35f34ca240b73d8d",
+    "original-source-hashes.json": "d2aacb880b578301e71a2bb61dcf3160c6d9e0a4ec0a63a5dd8aaf581570b5dd",
+    ".gitattributes": "e97602ab9cac70102245345c5ab0fc9830df8b17f1072b188265a662a3a547ae"
+  },
+  "excluded": "No provider raw responses, credentials, binary, object files, full frozen source, or historical experiment replay",
+  "byte_policy": "Archive-local attributes preserve raw evidence line endings and patch-context whitespace; numerical/source hash verification is primary."
+}

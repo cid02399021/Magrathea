@@ -1,0 +1,78 @@
+{
+  "reviewer": "independent Codex row_trace_review",
+  "mode": "read-only source and evidence review; only this review artifact written; no model, API, build or solver invoked by reviewer",
+  "verdict": "PASSED_DIAGNOSTIC_INSTRUMENTATION_AND_GRID20_FINDING; INSUFFICIENT_EVIDENCE_FOR_FINAL_PHYSICAL_SOLUTION",
+  "instrumentation": {
+    "changed_files": [
+      "src/hydro.cpp",
+      "src/tp_stepper.cpp"
+    ],
+    "added_lines": 6,
+    "all_added_lines_exactly_from_deepseek_proposal": true,
+    "independent_inverse_hash_check": "Removing ROWTRACE lines restores original-source-hashes.json exactly with hydro.cpp CRLF and tp_stepper.cpp LF",
+    "control_math_state_changes": false,
+    "additional_eos_or_tp_interpolation_queries": false,
+    "accessors": "getEOS returns the phase string; max_pressure_cgs returns stored final pressure. No new density or at_cgs evaluations.",
+    "scope_correction": "Ambiguous catch replacement restricted to derivs_m2; derivs_m3 untouched",
+    "label_limitation": "Rloop before set log actually executes AFTER gsl_root_fsolver_set; bracket values valid, label timing invalid",
+    "build_evidence": "build-result.json exit_code 0, 17.883 seconds; warnings present; reviewer did not rebuild"
+  },
+  "native_evidence": {
+    "launches_used": 2,
+    "actual_model_trials": 1,
+    "case": "grid-20",
+    "first_launch": "Path error before settings/integration; correctly retained and counted",
+    "grid17_executed": false,
+    "stderr": "grid-20-trace/stderr.log",
+    "stdout": "grid-20-trace/stdout.log",
+    "endpoint_accepted_pressure_cgs": 10000000000,
+    "external_integrated_mass_cgs": 1.1767551810655925E+26,
+    "gas_target_mass_cgs": 1.44049464E+26,
+    "remaining_gas_mass_cgs": 2.6373945893440743E+25,
+    "remaining_gas_mass_earth": 0.00441611900027473,
+    "remaining_gas_fraction": 0.1830895107908263,
+    "first_rejected_stage_pressure_cgs": 10000000000.000118,
+    "first_rejected_relative_overshoot": 1.18255615234375E-14,
+    "gsl_status": 9,
+    "sticky_callback_log_present": false
+  },
+  "findings": [
+    "At an accepted state exactly at the TP ceiling (1e4 bar), 18.309% of prescribed gas remains unintegrated. This is not merely completion of the whole layer followed by a tiny rounding step.",
+    "The first rejected RK stage is only approximately 1.18e-14 above the ceiling relatively. Its small excess identifies the strict range check trigger, not the amount of gas remaining.",
+    "When no strict pressure knot remains, tp_evolve_step delegates directly to GSL. TPProfile::at_cgs rejects P above its maximum before an out-of-range TP state can be used.",
+    "The initial root solver set exits with status 9 before bracket expansion. No evidence here shows a successful high-radius trial. Absence of sticky logging must not be reported as an actual high-end trial.",
+    "The trace does not directly print Rp at callback entry. Low-end attribution relies on the GSL Brent initialization order checked by the coordinator, rather than the misleading before-set log label alone.",
+    "For a positive-density spherical hydrostatic gas layer at fixed trial surface radius, Pbase >= P0 + G*(Mtotal-Mgas)*Mgas/(4*pi*Rsurface^4). Independent arithmetic reproduces the supplied lower bounds using source constants and P0=0.1 bar.",
+    "The lower bound exceeds the TP ceiling for the low-radius trial of grid17/18/21-24. It does not establish that any final converged radius would exceed the ceiling. For grid19/20 this lower bound alone is inconclusive."
+  ],
+  "limitations": [
+    "No repair has been performed or demonstrated.",
+    "No conclusion that the composition is physically impossible or the final solution lies outside TP coverage follows from this failed trial.",
+    "No native trace exists for grid17 in this bounded task; its numerical pathway remains unobserved.",
+    "One reproduced grid20 trial cannot establish identical pathways for the whole upper row.",
+    "No additional native launches or model/API calls are requested; the authorized launch limit is exhausted."
+  ],
+  "remaining_pressure_bound_independent_review": {
+    "status": "PASSED",
+    "method": "For continued positive-density hydrostatic inward integration from the logged accepted endpoint, r<=r_endpoint and enclosed mass>=Mtotal-Mgas. Integrating dP=G*m_enclosed/(4*pi*r^4)*dm_external gives DeltaP>=G*(Mtotal-Mgas)*Delta_m/(4*pi*r_endpoint^4).",
+    "G_cgs": 6.67384E-08,
+    "Mtotal_g": 4.8016488E+28,
+    "Mgas_g": 1.44049464E+26,
+    "remaining_gas_g": 2.6373945893440743E+25,
+    "endpoint_radius_cm": 1283606515.0805757,
+    "pi": 3.14159265359,
+    "remaining_pressure_lower_bound_bar": 2470.0112807722844,
+    "fixed_trial_base_pressure_lower_bound_bar": 12470.011280772283,
+    "scope": "Conditional continuation of THIS fixed initial-radius trial only; not a bound on any separately converged final solution. Positive density ensures radius decreases inward, so the pressure coefficient cannot fall below the stated conservative endpoint bound."
+  },
+  "report_verdict": "PASSED_NO_BLOCKING_FINDINGS",
+  "report_sha256": "3d78a9a5f99d532d49ee6d9e3424872b64b8dc57aa4ccae1ab479647bb931ff8",
+  "report_review_notes": [
+    "REPORT.md explicitly limits new native evidence to grid20 and says grid17 was not run; it does not claim eight individually reproduced trajectories.",
+    "The >=12470 bar bound is explicitly limited to the fixed low-radius trial, not the final physical solution.",
+    "The report explicitly states no repair and retains failed crosses without inferred radii.",
+    "Low-end callback attribution cites coordinator-verified GSL Brent/SAFE_FUNC_CALL sources; this reviewer did not independently browse those pages.",
+    "Table coverage and neighboring successes match supplied domain-analysis.json and nearby-successes.json.",
+    "The patch filename reference was corrected to diagnostic-only.patch before hashing."
+  ]
+}

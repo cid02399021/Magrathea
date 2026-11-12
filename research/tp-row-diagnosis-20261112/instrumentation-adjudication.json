@@ -1,0 +1,10 @@
+{
+  "all_added_lines_are_unchanged_deepseek_fprintf": true,
+  "remove_ROWTRACE_lines_restores_original_normalized_source": true,
+  "scope_binding": "replacement index2 restricted to derivs_m2; builder old pattern appears twice globally",
+  "nonblocking_label_issue": "Rloop log says before set but actually printed immediately after set; interpret bracket values only, not timing",
+  "changed_files": [
+    "src/hydro.cpp",
+    "src/tp_stepper.cpp"
+  ]
+}

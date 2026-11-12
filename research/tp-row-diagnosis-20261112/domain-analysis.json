@@ -1,0 +1,22 @@
+{
+  "HHe_table_P_GPa": [
+    1e-09,
+    10000000000000.0
+  ],
+  "HHe_table_T_K": [
+    100.0,
+    100000000.0
+  ],
+  "TP_P_bar": [
+    1e-05,
+    10000.0
+  ],
+  "TP_T_K_endpoints": [
+    350.0,
+    1258.359116298232
+  ],
+  "failure_P_GPa": 1.0,
+  "last_T_inside_EOS_table": true,
+  "failure_P_inside_EOS_table": true,
+  "note": "Table numerical coverage is not a complete physical validity certificate; rejection occurs at TP query before EOS at the failed stage."
+}

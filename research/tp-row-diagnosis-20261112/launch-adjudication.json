@@ -1,0 +1,9 @@
+{
+  "first_attempt": "Windows cfg path passed to WSL, settings open failed; retained and counted",
+  "correction": "controller path conversion only; no DeepSeek source changes",
+  "native_attempts_used": 2,
+  "native_attempt_limit": 2,
+  "instrumented_model_trials": 1,
+  "grid17_not_executed": true,
+  "stop": "Budget complete: research report only"
+}

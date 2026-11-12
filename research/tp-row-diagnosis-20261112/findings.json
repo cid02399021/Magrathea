@@ -1,0 +1,34 @@
+{
+  "case": "grid-20",
+  "fractions_percent": {
+    "Fe": 29.91,
+    "silicate": 0,
+    "water": 69.79,
+    "HHe": 0.3
+  },
+  "total_mass_earth": 8.04,
+  "gas_mass_earth": 0.02412,
+  "at_TP_end": {
+    "pressure_bar": 10000.0,
+    "temperature_K": 1258.359116298232,
+    "radius_earth": 2.012521777771712,
+    "gas_mass_integrated_earth": 0.019703880999725268,
+    "gas_mass_remaining_earth": 0.00441611900027473,
+    "gas_fraction_of_layer_remaining": 0.1830895107908263
+  },
+  "lower_bound_remaining_pressure_increase_bar": 2470.0112807722844,
+  "lower_bound_gas_base_pressure_for_THIS_trial_bar": 12470.011280772285,
+  "bound_scope": "For this fixed initial-radius trial only, assuming continued positive-density hydrostatic inward gas integration; no bound on a separately converged planet with another surface radius",
+  "initial_guess_radius_earth": 2.804400282241271,
+  "initial_lower_radius_earth": 2.243520225793017,
+  "initial_upper_radius_earth": 3.3652803386895247,
+  "upper_trial_was_not_established_as_evaluated": true,
+  "physical_composition_rejected": false,
+  "repair_applied": false,
+  "native_launch_attempts": 2,
+  "actual_instrumented_integrations": 1,
+  "new_deepseek_calls": 1,
+  "project_deepseek_total": 87,
+  "GSL_brent_source": "https://raw.githubusercontent.com/ampl/gsl/master/roots/brent.c",
+  "summary": "Initial low-radius trial exhausts supplied TP while finite gas mass remains; tiny excess is first rejected step, not evidence that only rounding matters. Radius-search initialization/domain handling and true-model TP coverage must be distinguished."
+}

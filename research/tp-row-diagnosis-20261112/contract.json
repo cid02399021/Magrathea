@@ -1,0 +1,42 @@
+{
+  "base": "f7bb58c2399866fca3be723a057d5d8ea213bffc",
+  "scope": "Investigate existing failed upper-row and nearby transition; no repairs, no EOS/TP changes, no grid/new compositions/no new no-water study",
+  "diagnostic_files_allowed": [
+    "src/hydro.cpp",
+    "src/tp_stepper.cpp"
+  ],
+  "logging_only": true,
+  "deepseek_project_before": 86,
+  "deepseek_project_limit": 88,
+  "deepseek_this_task_max": 2,
+  "native_attempt_limit": 2,
+  "native_cases": [
+    "grid-20",
+    "grid-17"
+  ],
+  "native_timeout_seconds": 60,
+  "build_timeout_seconds": 240,
+  "native_attempts": [
+    {
+      "case": "grid-20",
+      "status": "COMPLETED",
+      "config_sha256": "d255d5893678e1a07145de46f5b8241975939ef652de925371bb211ea6d43779",
+      "binary_sha256": "b73b11ba1c4ae3af4c4cbdb8f98c268b647679327a5d4858012232e04699369b",
+      "exit_code": 1,
+      "elapsed_seconds": 8.726356506347656,
+      "classification": "LAUNCH_PATH_ERROR_BEFORE_SETTINGS_OR_INTEGRATION"
+    },
+    {
+      "case": "grid-20",
+      "case_dir": "grid-20-trace",
+      "status": "COMPLETED",
+      "config_sha256": "abcc27f18f57021d9a74ec9b9f0ba5f0ebbf0db437d3a7e5c82445d3c86d5b08",
+      "binary_sha256": "b73b11ba1c4ae3af4c4cbdb8f98c268b647679327a5d4858012232e04699369b",
+      "exit_code": 1,
+      "elapsed_seconds": 4.421508073806763
+    }
+  ],
+  "raw_old_results_preserved": true,
+  "stopping": "Report research findings before any repair",
+  "diagnostic_goal": "Distinguish microscopic endpoint overshoot from significant gas mass remaining in an invalid initial-radius trial; no claim about final physical solution without evidence"
+}

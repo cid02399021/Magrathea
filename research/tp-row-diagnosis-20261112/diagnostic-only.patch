@@ -1,0 +1,52 @@
+--- a/src/hydro.cpp
++++ b/src/hydro.cpp
+@@ -103,6 +103,7 @@
+     }
+     catch (const std::exception& e)
+     {
++      fprintf(stderr, "[ROWTRACE] derivs_m2 TP at_cgs exception: P=y[1]=%.17g cgs, rawT=y[2]=%.17g K, radius y[0]/RE=%.17g, external integrated mass x/ME=%.17g, total gas mass M[3]=%.17g Earth units, TPmax=%.17g cgs, EOS=%s, what=%s\n", y[1], y[2], y[0]/RE, x/ME, (p->M.size() > 3 ? p->M[3] : -1.0), (p->tp ? p->tp->max_pressure_cgs() : -1.0), (p->Phase ? p->Phase->getEOS().c_str() : "null"), e.what());
+       if (p->tp_diagnostics)
+       {
+         p->tp_diagnostics->error = "TP profile evaluation failed at pressure: " + std::to_string(y[1]);
+@@ -1811,6 +1812,7 @@
+     return Rp - Mtot;
+ 
+   if (p->tp && !p->tp_error.empty()) {
++    fprintf(stderr, "[ROWTRACE] R_hydro early sticky tp_error: Rp/RE=%.17g, gas mass M[3]=%.17g Earth units, tp_error=%s\n", Rp/RE, (p->M.size() > 3 ? p->M[3] : -1.0), p->tp_error.c_str());
+     p->x[0] = std::numeric_limits<double>::quiet_NaN();
+     p->x[1] = -1.0;
+     return std::numeric_limits<double>::quiet_NaN();
+@@ -1902,6 +1904,7 @@
+   F.params = &params;
+ 
+   status = gsl_root_fsolver_set (s, &F, R_lo, R_hi);
++  fprintf(stderr, "[ROWTRACE] Rloop before set: initial guess Rp/RE=%.17g, R_lo/RE=%.17g, R_hi/RE=%.17g, gas mass M_Comp[3]=%.17g Earth units\n", Rp/RE, R_lo/RE, R_hi/RE, (M_Comp.size() > 3 ? M_Comp[3] : -1.0));
+   if (tp && (status != GSL_SUCCESS && status != GSL_EINVAL)) {
+     std::string original_tp_error = params.tp_error;
+     fprintf(stderr, "TP diagnostic error in radius initial set: %s (status %d)\n", original_tp_error.c_str(), status);
+--- a/src/tp_stepper.cpp
++++ b/src/tp_stepper.cpp
+@@ -79,6 +79,7 @@
+     }
+ 
+     if (target_idx == -1) {
++        fprintf(stderr, "[ROWTRACE] tp_evolve_step no strict knot in direction; delegating to gsl. m=%.17g cgs, mmax=%.17g, remaining=%.17g, h=%.17g, P=%.17g, r=%.17g, rawT=%.17g, direction=%d, tp_max_pressure=%.17g, branch=no-next-knot\n", *m, mmax, mmax - *m, *h, y[1], y[0], y[2], (int)direction, tp->max_pressure_cgs());
+         return gsl_odeiv2_evolve_apply(e, c, s, sys, m, mmax, h, y);
+     }
+ 
+@@ -118,6 +119,7 @@
+             }
+         }
+         if (new_target_idx == -1) {
++            fprintf(stderr, "[ROWTRACE] tp_evolve_step after snap no strict knot in direction; delegating to gsl. m=%.17g cgs, mmax=%.17g, remaining=%.17g, h=%.17g, P=%.17g, r=%.17g, rawT=%.17g, direction=%d, tp_max_pressure=%.17g, branch=snapped-no-next-knot\n", *m, mmax, mmax - *m, *h, y[1], y[0], y[2], (int)direction, tp->max_pressure_cgs());
+             return gsl_odeiv2_evolve_apply(e, c, s, sys, m, mmax, h, y);
+         }
+         target_idx = new_target_idx;
+@@ -153,6 +155,7 @@
+         *h = h_try;
+         int status = gsl_odeiv2_evolve_apply(e, c, s, sys, m, mmax, h, y);
+         if (status != GSL_SUCCESS) {
++            fprintf(stderr, "[ROWTRACE] tp_evolve_step GSL evolve_apply failed: status=%d, saved m=%.17g, saved P=%.17g, saved h=%.17g, target_knot=%.17g, attempted h_try=%.17g\n", status, m_save, y_save[1], h_save, target_knot, h_try);
+             *m = m_save;
+             y[0] = y_save[0];
+             y[1] = y_save[1];
