@@ -1,0 +1,26 @@
+{
+  "reviewer": "fresh uninvolved Codex hundredbar_independent_review",
+  "verdict": "CONFIGS_APPROVED_WRAPPER_REJECTED_NUMERICAL_EVIDENCE_INSUFFICIENT",
+  "arithmetic_independently_verified": true,
+  "rho_ideal_g_cm3": 0.01038407311734268,
+  "rho_real_g_cm3": 0.0076488043770334265,
+  "inward_density_drop_percent": 26.341000389731633,
+  "physical_switch_flag": "FAIL_HYBRID_DENSITY_CONTINUITY",
+  "production_preservation": "all45 listed files match production and frozen copies",
+  "compile_failure_verified": true,
+  "paid_api_calls": 1,
+  "planet_launches": 0,
+  "physical_acceptance": false,
+  "wrapper_issues": [
+    "nonexistent EOS::getEOS(string) API",
+    "bar passed where GPa expected in probe",
+    "human phase labels compared against variable identifiers",
+    "check mode missing strict audit registration",
+    "double escapes corrupt serialization and numeric null-termination checks"
+  ],
+  "acceptable_conclusions": [
+    "baseline configs are reusable inputs, not validated results",
+    "artificial density discontinuity demonstrated independently",
+    "no planet radius, convergence, solver success/failure or thermal-profile validation supported"
+  ]
+}

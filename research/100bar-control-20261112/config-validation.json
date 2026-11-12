@@ -1,0 +1,38 @@
+{
+  "grid14": {
+    "diff": {
+      "output_file": [
+        "\"/mnt/d/Codex/downloads/toi732c-pure-fe-pilot-20261106-run02/grid-14/model.dat\"",
+        "\"/mnt/d/Codex/downloads/toi732c-100bar-control-20261112/results/grid14/model.dat\""
+      ],
+      "atm_phasedgm": [
+        "\"gas_hhe_prescribed\"",
+        "\"HHe_tabulated\""
+      ],
+      "tp_profile_file": [
+        "\"/mnt/d/Codex/downloads/toi732c-pure-fe-pilot-20261106-run02/frozen-source/inputs/profile.csv\"",
+        null
+      ]
+    },
+    "total_mass_earth": 8.039999999999997,
+    "sha256": "b06c08ba7077a351ddd087f95ad49cf28f83de5e71646a3f25b3c8e0c50383b3"
+  },
+  "grid20": {
+    "diff": {
+      "output_file": [
+        "\"/mnt/d/Codex/downloads/toi732c-pure-fe-pilot-20261106-run02/grid-20/model.dat\"",
+        "\"/mnt/d/Codex/downloads/toi732c-100bar-control-20261112/results/grid20/model.dat\""
+      ],
+      "atm_phasedgm": [
+        "\"gas_hhe_prescribed\"",
+        "\"HHe_tabulated\""
+      ],
+      "tp_profile_file": [
+        "\"/mnt/d/Codex/downloads/toi732c-pure-fe-pilot-20261106-run02/frozen-source/inputs/profile.csv\"",
+        null
+      ]
+    },
+    "total_mass_earth": 8.04,
+    "sha256": "6988f60d324f53b55f097939df2a2f25d134c27f80b646326a8549576c583533"
+  }
+}

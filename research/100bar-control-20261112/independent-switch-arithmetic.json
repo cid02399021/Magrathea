@@ -1,0 +1,14 @@
+{
+  "method": "independent read-only arithmetic using existing check_pilot_model.table_data and exact native ideal-gas constants; not rejected C++ tool",
+  "P_bar": 100,
+  "P_GPa": 0.01,
+  "T_K": 350,
+  "ideal_molar_mass_parameter": 3,
+  "rho_ideal_g_cm3": 0.01038407311734268,
+  "rho_realHHe_g_cm3": 0.0076488043770334265,
+  "inward_density_relative_change": -0.26341000389731634,
+  "common_state_density_difference_relative_to_ideal": 0.26341000389731634,
+  "physical_switch_flag": "FAIL_HYBRID_DENSITY_CONTINUITY",
+  "physical_acceptance": false,
+  "planet_integrations": 0
+}

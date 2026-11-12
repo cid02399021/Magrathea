@@ -1,0 +1,40 @@
+{
+  "task": "100bar-native-thermal-control",
+  "authorized": "user explicitly asked detailed plan then begin",
+  "base": "835f57953ba93d2977e96629634b4c324398cc6c",
+  "production_base": "f7bb58c2399866fca3be723a057d5d8ea213bffc",
+  "max_deepseek_calls": 1,
+  "deepseek_calls": 1,
+  "project_before": 87,
+  "project_limit": 88,
+  "max_native_attempts": 4,
+  "native_attempts": [],
+  "per_attempt_seconds": 180,
+  "max_build_attempts": 2,
+  "build_attempts": [
+    {
+      "phase": "fresh-native-build",
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "elapsed_seconds": 12.72134804725647
+    },
+    {
+      "phase": "deepseek-audit-wrapper",
+      "status": "COMPLETED",
+      "exit_code": 1,
+      "elapsed_seconds": 4.63216233253479
+    }
+  ],
+  "source_mutations_allowed": false,
+  "case_ids": [
+    "grid14",
+    "grid20"
+  ],
+  "radius_relative_tolerance": 1e-05,
+  "density_relative_tolerance": 2e-06,
+  "surface_relative_tolerance": 1e-07,
+  "common_pressure_temperature_relative_tolerance": 0.001,
+  "hybrid_density_jump_physics_limit": 0.01,
+  "physical_acceptance": false,
+  "status": "AUDIT_IMPLEMENTATION_REJECTED_PROJECT_API_BUDGET_EXHAUSTED"
+}

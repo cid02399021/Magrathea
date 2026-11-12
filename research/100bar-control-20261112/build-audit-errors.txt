@@ -1,0 +1,3 @@
+native_audit.cpp:163:31: error: no matching function for call to ‘EOS::getEOS(const char [8])’
+native_audit.cpp:176:31: error: no matching function for call to ‘EOS::getEOS(const char [8])’
+native_audit.cpp:311:31: error: no matching function for call to ‘EOS::getEOS(std::string&)’
